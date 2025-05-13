@@ -8,13 +8,14 @@ body {
 
 /* Navigációs menü */
 header {
-  padding: 20px 0; /* Lejjebb tolja a menüt */
+  padding: 20px 0;
+  background-color: transparent;
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -24,39 +25,35 @@ nav ul li {
 }
 
 nav ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background-color: rgba(128, 128, 128, 0.4); /* Átlátszó szürke */
-  color: #333;
   text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  background-color: rgba(128, 128, 128, 0.3);
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
-  background-color: #3498db; /* Kék háttér hoverkor */
+  background-color: rgba(0, 123, 255, 0.7);
   color: white;
+  border-color: rgba(0, 123, 255, 1);
 }
 
-/* Videó szekció */
-#video {
-  text-align: center;
-  margin: 30px 0;
-}
-
-video {
-  max-width: 90%;
-  height: 500px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Videó */
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 /* Szekciók */
 section {
-  padding: 20px;
-  margin: 20px;
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 900px;
   background-color: white;
   border-radius: 5px;
 }
@@ -65,7 +62,7 @@ h1 {
   color: #333;
 }
 
-/* Lábléc */
+/* Lábjegyzet */
 footer {
   background-color: #333;
   color: white;
