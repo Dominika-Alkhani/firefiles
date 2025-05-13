@@ -1,3 +1,4 @@
+/* Alapstílusok */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,12 +6,14 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Fejléc eltávolítva, hogy ne legyen háttérszín */
+/* Fejléc eltávolítása */
 header {
-  padding: 10px 0;
-  color: white;
+  padding: 0; /* Fejléc eltávolítása */
+  margin: 0;
+  background-color: transparent; /* Fejléc színe átlátszó */
 }
 
+/* Navigációs lista */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -18,26 +21,27 @@ nav ul {
   text-align: center;
 }
 
+/* Navigációs menü pontok */
 nav ul li {
   display: inline;
   margin-right: 20px;
 }
 
-/* Menüpontok stílusa */
+/* Menüpontok alapstílusa */
 nav ul li a {
-  color: #333; /* Szürke szín alapból */
+  color: #333; /* Alap szürke szín */
   text-decoration: none;
   font-size: 18px;
-  padding: 10px 20px; /* Tömörítés a gombon belül */
-  border: 2px solid transparent; /* Átlátszó keret alapból */
+  padding: 10px 20px; /* Tömörítés a menü gombon belül */
+  border: 2px solid transparent; /* Átlátszó keret alapértelmezés */
   border-radius: 30px; /* Lekerekített sarkok */
   background-color: rgba(169, 169, 169, 0.5); /* Szürke átlátszó háttér */
-  transition: all 0.3s ease; /* Simulációs átmenet */
+  transition: all 0.3s ease; /* Simulált átmenet */
 }
 
 /* Hover (egér fölé viszi) hatás */
 nav ul li a:hover {
-  background-color: rgba(0, 123, 255, 0.3); /* Kék háttér, amikor az egér fölé viszik */
+  background-color: rgba(0, 123, 255, 0.5); /* Kék háttér, ha az egér fölé viszik */
   border-color: #007bff; /* Kék színű keret */
   color: #007bff; /* Kék színű szöveg */
 }
