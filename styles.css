@@ -35,6 +35,14 @@ nav ul li a:hover {
   color: #f39c12;
 }
 
+/* Videó stílus */
+video {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Szekciók */
 section {
   padding: 20px;
@@ -47,15 +55,6 @@ h1 {
   color: #333;
 }
 
-/* Videó stílus */
-video {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Footer */
 footer {
   background-color: #333;
   color: white;
