@@ -1,3 +1,4 @@
+/* Alapstílusok */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,9 +6,11 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Fejléc és navigáció */
 header {
-  background-color: transparent;
+  background-color: #333;
   padding: 10px 0;
+  color: white;
 }
 
 nav ul {
@@ -23,19 +26,25 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #333;
+  color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px 20px;
-  border-radius: 30px;
-  background-color: rgba(169, 169, 169, 0.5); /* szürke, átlátszó háttér */
-  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: rgba(169, 169, 169, 0.8); /* élénkebb szürke, ha rávisszük az egeret */
+  color: #f39c12;
 }
 
+/* Videó */
+video {
+  width: 100%; /* Teljes szélesség */
+  height: 60vh; /* Magasság, amit beállíthatsz, hogy ne legyen túl magas */
+  object-fit: cover; /* A videó kitöltse a teret */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Szekciók */
 section {
   padding: 20px;
   margin: 20px;
@@ -47,6 +56,7 @@ h1 {
   color: #333;
 }
 
+/* Lábléc */
 footer {
   background-color: #333;
   color: white;
@@ -55,12 +65,4 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-}
-
-video {
-  display: block;
-  margin: 20px auto;
-  width: 80%;
-  height: auto;
-  max-height: 500px;
 }
