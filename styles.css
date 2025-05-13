@@ -19,6 +19,7 @@ nav ul {
   margin: 0;
   padding: 0;
   text-align: center;
+  margin-top: 20px; /* Ezt a sort hozzáadtuk, hogy lejjebb kerüljön a menü */
 }
 
 /* Navigációs menü pontok */
