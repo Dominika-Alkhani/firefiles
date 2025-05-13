@@ -25,14 +25,21 @@ nav ul li {
   margin-right: 20px;
 }
 
+/* Menüpontok stílusa */
 nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  padding: 10px 20px; /* Tömörítés a gombon belül */
+  border: 2px solid transparent; /* Átlátszó keret alapból */
+  border-radius: 30px; /* Lekerekített sarkok */
+  transition: all 0.3s ease; /* Simulációs átmenet */
 }
 
 nav ul li a:hover {
-  color: #f39c12;
+  background-color: rgba(243, 156, 18, 0.2); /* Sárga háttér szín, ha hover-olsz */
+  border-color: #f39c12; /* Sárga keret a hover során */
+  color: #f39c12; /* Szöveg színe sárga a hover alatt */
 }
 
 /* Szekciók */
@@ -55,4 +62,4 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-} 
+}
