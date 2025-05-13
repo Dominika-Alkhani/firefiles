@@ -6,49 +6,51 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Fejléc és navigáció */
+/* Navigációs menü */
 header {
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px 0; /* Lejjebb tolja a menüt */
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: inline-block;
+  text-align: center;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 nav ul li a {
-  background-color: rgba(192, 192, 192, 0.6); /* Átlátszó szürke háttér */
-  color: black;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: rgba(128, 128, 128, 0.4); /* Átlátszó szürke */
+  color: #333;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px 20px;
-  border-radius: 25px; /* Lekerekített sarkok */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #1E90FF; /* Kék szín, amikor ráviszik az egeret */
+  background-color: #3498db; /* Kék háttér hoverkor */
   color: white;
 }
 
-/* Videó beágyazása */
+/* Videó szekció */
 #video {
   text-align: center;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
-iframe {
-  border: none;
-  max-width: 100%;
+video {
+  max-width: 90%;
   height: 500px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Szekciók */
@@ -63,13 +65,10 @@ h1 {
   color: #333;
 }
 
-/* Lábjegyzet */
+/* Lábléc */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
 }
