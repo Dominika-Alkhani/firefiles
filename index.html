@@ -4,8 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weboldal</title>
-  <!-- Itt hivatkozunk a CSS fájlra -->
-  <link rel="stylesheet" href="styles.css">
+  
+  <!-- CSS közvetlenül a HTML fájlba -->
+  <style>
+    /* Alapstílusok */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Fejléc és navigáció */
+    header {
+      background-color: #333;
+      padding: 10px 0;
+      color: white;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    /* Menüpontok stílusa */
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px; /* Tömörítés a gombon belül */
+      border: 2px solid transparent; /* Átlátszó keret alapból */
+      border-radius: 30px; /* Lekerekített sarkok */
+      transition: all 0.3s ease; /* Simulációs átmenet */
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(243, 156, 18, 0.2); /* Sárga háttér szín, ha hover-olsz */
+      border-color: #f39c12; /* Sárga keret a hover során */
+      color: #f39c12; /* Szöveg színe sárga a hover alatt */
+    }
+
+    /* Szekciók */
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -40,4 +107,3 @@
 
 </body>
 </html>
-
