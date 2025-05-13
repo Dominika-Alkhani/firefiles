@@ -6,9 +6,8 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: transparent;
   padding: 10px 0;
-  color: white;
 }
 
 nav ul {
@@ -24,13 +23,17 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #333;
   text-decoration: none;
   font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: rgba(169, 169, 169, 0.5); /* szürke, átlátszó háttér */
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #f39c12;
+  background-color: rgba(169, 169, 169, 0.8); /* élénkebb szürke, ha rávisszük az egeret */
 }
 
 section {
@@ -56,8 +59,8 @@ footer {
 
 video {
   display: block;
-  margin: 0 auto;
-  width: 100%;
+  margin: 20px auto;
+  width: 80%;
   height: auto;
   max-height: 500px;
 }
