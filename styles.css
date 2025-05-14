@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white; /* Fehér háttér */
+  background-color: white;
 }
 
 /* Videó */
@@ -44,30 +44,30 @@ video {
 /* Intro szekció */
 .intro-section {
   width: 100%;
-  height: auto;
-  margin: 60px 0;
-  padding: 0;
-  overflow: hidden;
-  transform: translateY(50px);
+  padding: 60px 0;
   opacity: 0;
+  transform: translateY(50px);
   transition: all 1s ease-out;
 }
 
 .intro-section.visible {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
 }
 
-.scroll-image {
-  display: block;
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 5%;
 }
 
-/* Intro kép méretezés */
 .intro-image {
-  width: 70%;
-  max-width: 800px;
+  width: 45%;
+  max-width: 600px;
   height: auto;
-  margin-left: 5%;
 }
 
 /* Cím */
@@ -129,4 +129,20 @@ footer {
   padding: 10px;
   color: white;
   background-color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-image {
+    width: 80%;
+  }
+
+  .step-image {
+    width: 80%;
+  }
 }
