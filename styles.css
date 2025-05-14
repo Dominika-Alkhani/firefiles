@@ -45,12 +45,10 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Görgetésre megjelenő szekció (teljes képernyős kép) */
+/* Kép szekció */
 .intro-section {
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   transform: translateY(50px);
   opacity: 0;
@@ -62,7 +60,6 @@ video {
   opacity: 1;
 }
 
-/* Teljes képernyős kép */
 .scroll-image {
   width: 100%;
   height: 100%;
@@ -70,33 +67,31 @@ video {
   display: block;
 }
 
-/* Kérdés szakasz */
-.question-section {
+/* Görgetésre megjelenő cím */
+.scroll-title {
+  font-family: 'Yellowtail', cursive;
+  font-size: 3rem;
+  color: #5ce1e6;
   text-align: center;
-  margin-top: 60px;
+  margin: 50px 0 20px;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 1s ease;
+  transition: all 1s ease-out;
 }
 
-.question-section.visible {
+.scroll-title.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.question-title {
-  font-family: 'Yellowtail', cursive;
-  font-size: 48px;
-  color: #5ce1e6;
-}
-
-/* Step1 kép animációja balról jobbra */
+/* Step képek */
 .step-image-section {
+  width: 100%;
   text-align: center;
-  margin-top: 40px;
   opacity: 0;
   transform: translateX(-100px);
   transition: all 1s ease-out;
+  margin-bottom: 40px;
 }
 
 .step-image-section.visible {
@@ -105,7 +100,7 @@ video {
 }
 
 .step-image {
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
 }
 
