@@ -1,6 +1,6 @@
 /* Alapstílusok */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Betűtípus frissítve */
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -63,15 +63,16 @@ nav ul li a:hover {
 }
 
 .intro-text h2 {
-  font-size: 28px;
-  color: #007BFF;
-  font-style: italic;
+  font-size: 32px; /* Nagyobb cím */
+  color: #007BFF; /* Világos kék szín */
+  font-weight: 700; /* Kiemelt vastagság */
   margin-bottom: 15px;
 }
 
 .intro-text p {
   font-size: 16px;
   color: #000;
+  line-height: 1.5;
 }
 
 /* Lábléc */
