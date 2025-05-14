@@ -7,7 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Menüsor -->
+  <!-- Videó -->
+  <video autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4" />
+    A böngésződ nem támogatja a videólejátszást.
+  </video>
+
+  <!-- Menüsor (most a videó alatt) -->
   <nav class="navbar">
     <ul>
       <li><a href="#home">Főoldal</a></li>
@@ -16,13 +22,7 @@
     </ul>
   </nav>
 
-  <!-- Videó -->
-  <video autoplay muted loop playsinline>
-    <source src="video.mp4" type="video/mp4" />
-    A böngésződ nem támogatja a videólejátszást.
-  </video>
-
-  <!-- Szöveges szekció -->
+  <!-- Szöveg -->
   <section class="intro-section hidden">
     <h1>Miért válassz minket?</h1>
     <p>
@@ -38,7 +38,6 @@
   </footer>
 
   <script>
-    // Animáció: szöveg görgetésre jelenik meg
     const intro = document.querySelector('.intro-section');
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
