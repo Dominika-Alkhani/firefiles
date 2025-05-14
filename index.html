@@ -28,9 +28,14 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image" />
   </section>
 
-  <!-- Csatlakozás kérdés -->
+  <!-- Kiemelt kérdés -->
   <section class="question-section hidden">
-    <h2>Hogyan tudsz hozzánk csatlakozni?</h2>
+    <h2 class="question-title">Hogyan tudsz hozzánk csatlakozni?</h2>
+  </section>
+
+  <!-- Step1 kép animációval -->
+  <section class="step-image-section hidden">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
   </section>
 
   <footer>
@@ -38,16 +43,14 @@
   </footer>
 
   <script>
-    const intro = document.querySelector('.intro-section');
-    const question = document.querySelector('.question-section');
+    const sections = document.querySelectorAll('.hidden');
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
-      if (intro.getBoundingClientRect().top < triggerPoint) {
-        intro.classList.add('visible');
-      }
-      if (question.getBoundingClientRect().top < triggerPoint) {
-        question.classList.add('visible');
-      }
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
+        }
+      });
     });
   </script>
 </body>
