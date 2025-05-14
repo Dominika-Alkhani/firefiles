@@ -70,6 +70,27 @@ video {
   display: block;
 }
 
+/* Új szöveges szekció görgetésre */
+.question-section {
+  text-align: center;
+  margin: 3rem auto;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.question-section.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.question-section h2 {
+  font-size: 2.5rem;
+  color: #a8d8ff; /* világoskék */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
 /* Lábléc */
 footer {
   text-align: center;
