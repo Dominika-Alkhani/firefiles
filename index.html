@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utazási Weboldal</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Videó -->
@@ -27,7 +28,7 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image" />
   </section>
 
-  <!-- Szöveg a kép alatt -->
+  <!-- Csatlakozás kérdés -->
   <section class="question-section hidden">
     <h2>Hogyan tudsz hozzánk csatlakozni?</h2>
   </section>
@@ -39,14 +40,11 @@
   <script>
     const intro = document.querySelector('.intro-section');
     const question = document.querySelector('.question-section');
-
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
-
       if (intro.getBoundingClientRect().top < triggerPoint) {
         intro.classList.add('visible');
       }
-
       if (question.getBoundingClientRect().top < triggerPoint) {
         question.classList.add('visible');
       }
