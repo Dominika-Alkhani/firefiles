@@ -28,14 +28,16 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image" />
   </section>
 
-  <!-- Kiemelt kérdés -->
-  <section class="question-section hidden">
-    <h2 class="question-title">Hogyan tudsz hozzánk csatlakozni?</h2>
+  <!-- Cím és step1 -->
+  <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
+
+  <section class="step-image-section hidden" id="step1">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
   </section>
 
-  <!-- Step1 kép animációval -->
-  <section class="step-image-section hidden">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
+  <!-- Újonnan hozzáadott step2 -->
+  <section class="step-image-section hidden" id="step2">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
   </section>
 
   <footer>
@@ -43,14 +45,26 @@
   </footer>
 
   <script>
-    const sections = document.querySelectorAll('.hidden');
+    const intro = document.querySelector('.intro-section');
+    const title = document.querySelector('.scroll-title');
+    const step1 = document.querySelector('#step1');
+    const step2 = document.querySelector('#step2');
+
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
-      sections.forEach(section => {
-        if (section.getBoundingClientRect().top < triggerPoint) {
-          section.classList.add('visible');
-        }
-      });
+
+      if (intro.getBoundingClientRect().top < triggerPoint) {
+        intro.classList.add('visible');
+      }
+      if (title.getBoundingClientRect().top < triggerPoint) {
+        title.classList.add('visible');
+      }
+      if (step1.getBoundingClientRect().top < triggerPoint) {
+        step1.classList.add('visible');
+      }
+      if (step2.getBoundingClientRect().top < triggerPoint) {
+        step2.classList.add('visible');
+      }
     });
   </script>
 </body>
