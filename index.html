@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utazási Weboldal</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Videó -->
@@ -28,43 +28,45 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image" />
   </section>
 
-  <!-- Cím és step1 -->
+  <!-- Görgetésre megjelenő cím -->
   <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
 
+  <!-- Step 1 -->
   <section class="step-image-section hidden" id="step1">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
   </section>
 
-  <!-- Újonnan hozzáadott step2 -->
+  <!-- Step 2 -->
   <section class="step-image-section hidden" id="step2">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
   </section>
 
+  <!-- Step 3 -->
+  <section class="step-image-section hidden" id="step3">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
+  </section>
+
+  <!-- Lábléc -->
   <footer>
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
+  <!-- Görgetés script -->
   <script>
     const intro = document.querySelector('.intro-section');
     const title = document.querySelector('.scroll-title');
     const step1 = document.querySelector('#step1');
     const step2 = document.querySelector('#step2');
+    const step3 = document.querySelector('#step3');
 
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
 
-      if (intro.getBoundingClientRect().top < triggerPoint) {
-        intro.classList.add('visible');
-      }
-      if (title.getBoundingClientRect().top < triggerPoint) {
-        title.classList.add('visible');
-      }
-      if (step1.getBoundingClientRect().top < triggerPoint) {
-        step1.classList.add('visible');
-      }
-      if (step2.getBoundingClientRect().top < triggerPoint) {
-        step2.classList.add('visible');
-      }
+      if (intro.getBoundingClientRect().top < triggerPoint) intro.classList.add('visible');
+      if (title.getBoundingClientRect().top < triggerPoint) title.classList.add('visible');
+      if (step1.getBoundingClientRect().top < triggerPoint) step1.classList.add('visible');
+      if (step2.getBoundingClientRect().top < triggerPoint) step2.classList.add('visible');
+      if (step3.getBoundingClientRect().top < triggerPoint) step3.classList.add('visible');
     });
   </script>
 </body>
