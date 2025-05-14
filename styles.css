@@ -64,8 +64,8 @@ video {
 
 /* Intro kép méretezés */
 .intro-image {
-  width: 60%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 800px;
   height: auto;
   margin-left: 5%;
 }
