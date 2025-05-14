@@ -45,7 +45,7 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Görgetésre megjelenő szekció */
+/* Görgetésre megjelenő szekció (teljes képernyős kép) */
 .intro-section {
   width: 100vw;
   height: 100vh;
@@ -70,24 +70,43 @@ video {
   display: block;
 }
 
-/* Csatlakozás kérdés */
+/* Kérdés szakasz */
 .question-section {
   text-align: center;
-  margin: 4rem auto;
-  transform: translateY(50px);
+  margin-top: 60px;
   opacity: 0;
-  transition: all 1s ease-out;
+  transform: translateY(50px);
+  transition: all 1s ease;
 }
 
 .question-section.visible {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
 }
 
-.question-section h2 {
-  font-size: 3rem;
-  color: #5ce1e6;
+.question-title {
   font-family: 'Yellowtail', cursive;
+  font-size: 48px;
+  color: #5ce1e6;
+}
+
+/* Step1 kép animációja balról jobbra */
+.step-image-section {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+
+.step-image-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.step-image {
+  max-width: 80%;
+  height: auto;
 }
 
 /* Lábléc */
