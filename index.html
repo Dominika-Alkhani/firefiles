@@ -23,9 +23,12 @@
     </ul>
   </nav>
 
-  <!-- Nagy kép -->
-  <section class="intro-section hidden align-left">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image intro-image" />
+  <!-- Nagy kép szekció: pics1 + postit -->
+  <section class="intro-section hidden">
+    <div class="intro-container">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image intro-image left" />
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it kép" class="scroll-image intro-image right" />
+    </div>
   </section>
 
   <!-- Cím -->
@@ -51,6 +54,7 @@
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
+  <!-- Görgetésfigyelő script -->
   <script>
     const sections = document.querySelectorAll('.hidden');
     window.addEventListener('scroll', () => {
