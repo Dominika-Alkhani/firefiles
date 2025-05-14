@@ -45,7 +45,7 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Görgetésre megjelenő szekció (teljes képernyős kép) */
+/* Görgetésre megjelenő szekció */
 .intro-section {
   width: 100vw;
   height: 100vh;
@@ -70,10 +70,10 @@ video {
   display: block;
 }
 
-/* Új szöveges szekció görgetésre */
+/* Csatlakozás kérdés */
 .question-section {
   text-align: center;
-  margin: 3rem auto;
+  margin: 4rem auto;
   transform: translateY(50px);
   opacity: 0;
   transition: all 1s ease-out;
@@ -85,10 +85,9 @@ video {
 }
 
 .question-section h2 {
-  font-size: 2.5rem;
-  color: #a8d8ff; /* világoskék */
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
+  font-size: 3rem;
+  color: #5ce1e6;
+  font-family: 'Yellowtail', cursive;
 }
 
 /* Lábléc */
