@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weboldal</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Videó legfölül -->
+  <!-- Videó legfelül -->
   <video autoplay muted loop playsinline>
-    <source src="video.mp4" type="video/mp4" />
+    <source src="video.mp4" type="video/mp4">
     A böngésződ nem támogatja a videólejátszást.
   </video>
 
-  <!-- Menüsor a videó alatt -->
+  <!-- Navigáció -->
   <header>
     <nav>
       <ul>
@@ -25,14 +25,31 @@
     </nav>
   </header>
 
-  <!-- Szekciók tartalom nélkül, helyet hagyva későbbre -->
-  <section id="home"></section>
-  <section id="about"></section>
-  <section id="contact"></section>
+  <!-- Animált szöveg -->
+  <section class="intro-text">
+    <h2>Miért válassz minket?</h2>
+    <p>
+      Kedvező árú, csábító utazási lehetőségeket kínálunk könnyen kezelhető felületen, széleskörű szolgáltatásokkal és többnyelvű, segítőkész ügyfélszolgálattal — hogy az utazásod már a tervezésnél élmény legyen.
+    </p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Weboldal</p>
   </footer>
 
+  <!-- Görgetés figyelése -->
+  <script>
+    const intro = document.querySelector('.intro-text');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          intro.classList.add('visible');
+        }
+      });
+    });
+
+    observer.observe(intro);
+  </script>
 </body>
 </html>
