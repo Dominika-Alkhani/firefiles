@@ -6,36 +6,7 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Navigációs sáv */
-header {
-  background-color: transparent;
-  padding: 15px 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background-color: rgba(128, 128, 128, 0.5); /* Átlátszó szürke */
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: rgba(128, 128, 128, 0.8); /* Élénkebb szürke */
-}
-
-/* Videó stílus */
+/* Videó */
 video {
   width: 100%;
   height: 60vh;
@@ -43,9 +14,64 @@ video {
   display: block;
 }
 
-/* Szekciók */
-section {
+/* Navigáció */
+header {
+  background-color: transparent;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.5); /* átlátszó szürke */
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(128, 128, 128, 0.8); /* élénkebb szürke */
+}
+
+/* Animált szöveg */
+.intro-text {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
   padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.intro-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-text h2 {
+  font-size: 28px;
+  color: #007BFF;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 16px;
+  color: #000;
 }
 
 /* Lábléc */
@@ -54,4 +80,24 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+/* Mobilbarát beállítások */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .intro-text {
+    padding: 20px;
+  }
+
+  .intro-text h2 {
+    font-size: 22px;
+  }
+
+  .intro-text p {
+    font-size: 15px;
+  }
 }
