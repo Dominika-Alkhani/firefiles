@@ -2,7 +2,11 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Videó */
@@ -119,7 +123,7 @@ video {
 }
 
 .step-image {
-  width: 400px; /* ← NAGYOBB LETT */
+  width: 400px; /* nagyobb méret */
   max-width: 100%;
   height: auto;
   display: inline-block;
