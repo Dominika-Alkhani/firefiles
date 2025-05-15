@@ -119,7 +119,7 @@ video {
 }
 
 .step-image {
-  width: 300px;
+  width: 400px; /* ← NAGYOBB LETT */
   max-width: 100%;
   height: auto;
   display: inline-block;
