@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utazási Weboldal</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
@@ -42,6 +42,7 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
 
+  <!-- Itt jött a változás: hozzáadtam a hidden osztályt -->
   <section class="image-below-step3 hidden">
     <h2 class="scroll-title">
       <span class="title-bg">Az üzleti része is érdekel?</span>
@@ -55,21 +56,26 @@
 
   <script>
     const sections = document.querySelectorAll('.hidden');
-
-    function checkVisibility() {
+    window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
       sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < triggerPoint) {
+        if (section.getBoundingClientRect().top < triggerPoint) {
           section.classList.add('visible');
           section.classList.remove('hidden');
         }
       });
-    }
+    });
 
-    window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('load', checkVisibility); // betöltéskor is ellenőrizze
-
+    // Opció: oldal betöltésénél is ellenőrizzük, hátha már látszik a szakasz
+    window.addEventListener('load', () => {
+      const triggerPoint = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
+          section.classList.remove('hidden');
+        }
+      });
+    });
   </script>
 </body>
 </html>
