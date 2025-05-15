@@ -41,33 +41,56 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Intro szekció */
-.intro-section {
+/* Képek szekció */
+.image-section {
   width: 100%;
-  padding: 60px 0;
+  padding: 60px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Kép konténerek */
+.image-container {
   opacity: 0;
-  transform: translateY(50px);
   transition: all 1s ease-out;
 }
 
-.intro-section.visible {
+.main-image {
+  width: 60%;
+  max-width: 800px;
+  display: block;
+  object-fit: cover;
+  margin-left: 0;
+}
+
+.postit-image {
+  width: 40%;
+  max-width: 400px;
+  display: block;
+  object-fit: contain;
+  margin-left: auto;
+}
+
+/* Animációk */
+.slide-in-left {
+  transform: translateX(0);
   opacity: 1;
-  transform: translateY(0);
 }
 
-.intro-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 5%;
+.slide-in-right {
+  transform: translateX(0);
+  opacity: 1;
 }
 
-.intro-image {
-  width: 45%;
-  max-width: 600px;
-  height: auto;
+.hidden-left {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.hidden-right {
+  transform: translateX(100px);
+  opacity: 0;
 }
 
 /* Cím */
@@ -108,7 +131,6 @@ video {
   display: inline-block;
 }
 
-/* Igazítások */
 .align-left {
   text-align: left;
   padding-left: 5%;
@@ -131,18 +153,16 @@ footer {
   background-color: #333;
 }
 
-/* Responsiveness */
+/* Reszponzivitás */
 @media (max-width: 768px) {
-  .intro-container {
-    flex-direction: column;
-    align-items: center;
+  .main-image,
+  .postit-image {
+    width: 90%;
+    margin: 0 auto;
   }
 
-  .intro-image {
-    width: 80%;
-  }
-
-  .step-image {
-    width: 80%;
+  .image-section {
+    padding: 40px 5%;
+    gap: 20px;
   }
 }
