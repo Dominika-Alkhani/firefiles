@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 200% 200%; /* Még nagyobb háttér */
+  background-size: 200% 200%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,7 +107,11 @@ video {
   font-family: 'Yellowtail', cursive;
   font-size: 48px;
   color: #5ce1e6;
-  margin: 40px 0;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 80%;
+  background-color: rgba(100, 100, 100, 0.4); /* áttetsző szürke háttér */
+  border-radius: 20px; /* lekerekített keret */
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
