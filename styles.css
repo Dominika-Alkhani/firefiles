@@ -3,13 +3,12 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 200% 200%;  /* nagyobb háttér */
+  background-size: 200% 200%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Videó */
 video {
   width: 100%;
   height: 60vh;
@@ -17,7 +16,6 @@ video {
   display: block;
 }
 
-/* Menüsor */
 .navbar {
   margin: 20px auto;
   width: fit-content;
@@ -45,7 +43,6 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Intro szekció */
 .intro-section {
   width: 100vw;
   height: auto;
@@ -66,26 +63,25 @@ video {
 }
 
 .scroll-image {
-  width: 850px; /* nagyobb kép */
+  width: 850px;
   max-width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
-  align-self: flex-start; /* balra igazítás */
+  align-self: flex-start;
   border: 3px solid rgba(200, 200, 200, 0.7);
   border-radius: 15px;
 }
 
-/* postit kép */
+/* postit kép nagyobb */
 .postit-image {
-  width: 400px; /* nagyobb kép */
+  width: 600px;
   max-width: 100%;
   height: auto;
   display: block;
-  align-self: flex-end; /* jobbra igazítás */
+  align-self: flex-end;
   border-radius: 15px;
 
-  /* Gördülésre jobbról balra */
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s ease-out;
@@ -96,7 +92,6 @@ video {
   transform: translateX(0);
 }
 
-/* Cím */
 .scroll-title {
   display: inline-block;
   padding: 10px 30px;
@@ -119,7 +114,6 @@ video {
   transform: translateY(0);
 }
 
-/* Step szekciók */
 .step-image-section {
   width: 100%;
   opacity: 0;
@@ -136,13 +130,12 @@ video {
 }
 
 .step-image {
-  width: 500px;  /* nagyobb képek */
+  width: 500px;
   max-width: 100%;
   height: auto;
   border-radius: 15px;
 }
 
-/* Képek igazítása a step szekciókon belül */
 .step-left {
   margin-left: 5%;
   margin-right: auto;
@@ -160,7 +153,6 @@ video {
   align-self: flex-end;
 }
 
-/* Lábléc */
 footer {
   text-align: center;
   padding: 10px;
