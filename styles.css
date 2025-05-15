@@ -52,8 +52,8 @@ video {
 }
 
 .pics1-image {
-  width: 900px;
-  max-width: 95%;
+  width: 700px; 
+  max-width: 90%;
   border-radius: 20px;
   opacity: 0;
   transform: translateX(-100px);
