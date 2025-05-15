@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: cover;
+  background-size: 150% 150%; /* nagyobb méret */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
