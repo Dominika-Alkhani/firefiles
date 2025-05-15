@@ -45,28 +45,35 @@ video {
 .intro-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
   padding: 40px 5%;
 }
 
-/* Képek */
+/* Fő kép (bal oldalon, nagyobb) */
+.main-image-container {
+  align-self: flex-start;
+}
+
 .main-image {
-  width: 70%;
-  max-width: 700px;
+  width: 80%;
+  max-width: 800px;
   height: auto;
   display: block;
 }
 
-.postit-image {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Post-it kép (jobb oldalra igazítva) */
+.postit-image-container {
   align-self: flex-end;
 }
 
-/* Animációk */
+.postit-image {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animációs osztályok */
 .hidden-left {
   opacity: 0;
   transform: translateX(-100px);
@@ -107,7 +114,7 @@ video {
   transform: translateY(0);
 }
 
-/* Step szekciók */
+/* Step képek */
 .step-image-section {
   width: 100%;
   text-align: center;
