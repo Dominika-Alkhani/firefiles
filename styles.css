@@ -106,7 +106,7 @@ video {
   text-align: center;
   font-family: 'Yellowtail', cursive;
   font-size: 48px;
-  color: #5ce1e6;
+  color: white; /* → Fehérre cserélve */
   margin: 40px auto;
   padding: 20px;
   max-width: 80%;
