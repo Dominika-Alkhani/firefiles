@@ -66,7 +66,7 @@ video {
 }
 
 .scroll-image {
-  width: 700px; /* nagyobb kép */
+  width: 850px; /* nagyobb kép */
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -78,7 +78,7 @@ video {
 
 /* postit kép */
 .postit-image {
-  width: 320px; /* nagyobb kép */
+  width: 400px; /* nagyobb kép */
   max-width: 100%;
   height: auto;
   display: block;
@@ -136,7 +136,7 @@ video {
 }
 
 .step-image {
-  width: 400px;
+  width: 500px;  /* nagyobb képek */
   max-width: 100%;
   height: auto;
   border-radius: 15px;
