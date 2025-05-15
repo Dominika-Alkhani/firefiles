@@ -55,19 +55,19 @@ video {
 }
 
 .main-image {
-  width: 80%;
-  max-width: 800px;
+  width: 95%;
+  max-width: 1000px;
   height: auto;
   display: block;
 }
 
-/* Post-it kép (jobb oldalra igazítva) */
+/* Post-it kép (jobb oldalra igazítva, nagyobb) */
 .postit-image-container {
   align-self: flex-end;
 }
 
 .postit-image {
-  width: 400px;
+  width: 500px;
   max-width: 100%;
   height: auto;
   display: block;
