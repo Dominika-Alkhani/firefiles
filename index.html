@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Utazási Weboldal</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
@@ -42,12 +42,12 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
 
-<section class="image-below-step3">
-  <h2 class="scroll-title">
-    <span class="title-bg">Az üzleti része is érdekel?</span>
-  </h2>
-  <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics2(2).png" alt="Extra kép" class="extra-image" />
-</section>
+  <section class="image-below-step3 hidden">
+    <h2 class="scroll-title">
+      <span class="title-bg">Az üzleti része is érdekel?</span>
+    </h2>
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics2(2).png" alt="Extra kép" class="extra-image" />
+  </section>
 
   <footer>
     <p>&copy; 2025 Utazási Weboldal</p>
@@ -55,14 +55,21 @@
 
   <script>
     const sections = document.querySelectorAll('.hidden');
-    window.addEventListener('scroll', () => {
+
+    function checkVisibility() {
       const triggerPoint = window.innerHeight * 0.8;
       sections.forEach(section => {
-        if (section.getBoundingClientRect().top < triggerPoint) {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerPoint) {
           section.classList.add('visible');
+          section.classList.remove('hidden');
         }
       });
-    });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility); // betöltéskor is ellenőrizze
+
   </script>
 </body>
 </html>
