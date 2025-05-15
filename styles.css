@@ -116,30 +116,45 @@ video {
   transform: translateX(0);
 }
 
+/* Általános képstílus */
 .step-image {
   width: 700px;
   max-width: 95%;
   height: auto;
   display: block;
   border-radius: 20px;
-  margin: 0 auto; /* EZ KELL A KÖZÉPRE IGAZÍTÁSHOZ */
 }
 
+/* Balra igazított szekció */
 .left-align {
   text-align: left;
-  padding-left: 0;
+  padding-left: 5%;
 }
 
+.left-align .step-image {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Középre igazított szekció */
 .center-align {
   text-align: center;
 }
 
+.center-align .step-image {
+  margin: 0 auto;
+}
+
+/* Jobbra igazított szekció */
 .right-align {
   text-align: right;
   padding-right: 5%;
-  transform: translateX(100px);
 }
 
+.right-align .step-image {
+  margin-left: auto;
+  margin-right: 0;
+}
 .image-below-step3 {
   width: 100%;
   display: flex;
