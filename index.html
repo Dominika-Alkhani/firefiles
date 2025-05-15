@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <!-- Videó -->
   <video autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4" />
@@ -23,12 +24,12 @@
     </ul>
   </nav>
 
-  <!-- Képek szekció -->
-  <section class="image-section">
-    <div class="image-container hidden-left">
+  <!-- Intro szekció -->
+  <section class="intro-section">
+    <div class="main-image-container hidden-left">
       <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="main-image" />
     </div>
-    <div class="image-container hidden-right">
+    <div class="postit-image-container hidden-right">
       <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it kép" class="postit-image" />
     </div>
   </section>
@@ -37,17 +38,17 @@
   <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
 
   <!-- Step 1 -->
-  <section class="step-image-section hidden align-left" id="step1">
+  <section class="step-image-section hidden">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
   </section>
 
   <!-- Step 2 -->
-  <section class="step-image-section hidden align-center" id="step2">
+  <section class="step-image-section hidden">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
   </section>
 
   <!-- Step 3 -->
-  <section class="step-image-section hidden align-right" id="step3">
+  <section class="step-image-section hidden">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
 
@@ -56,30 +57,13 @@
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
-  <!-- Görgetésfigyelő script -->
   <script>
-    const hiddenLeft = document.querySelectorAll('.hidden-left');
-    const hiddenRight = document.querySelectorAll('.hidden-right');
-    const hiddenGeneric = document.querySelectorAll('.hidden');
-
+    const hiddenElements = document.querySelectorAll('.hidden, .hidden-left, .hidden-right');
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
-
-      hiddenGeneric.forEach(section => {
-        if (section.getBoundingClientRect().top < triggerPoint) {
-          section.classList.add('visible');
-        }
-      });
-
-      hiddenLeft.forEach(el => {
+      hiddenElements.forEach(el => {
         if (el.getBoundingClientRect().top < triggerPoint) {
-          el.classList.add('slide-in-left');
-        }
-      });
-
-      hiddenRight.forEach(el => {
-        if (el.getBoundingClientRect().top < triggerPoint) {
-          el.classList.add('slide-in-right');
+          el.classList.add('visible');
         }
       });
     });
