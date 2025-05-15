@@ -35,7 +35,9 @@
   </section>
 
   <!-- Cím -->
-  <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
+  <h2 class="scroll-title hidden">
+    Hogyan tudsz hozzánk csatlakozni?
+  </h2>
 
   <!-- Step 1 -->
   <section class="step-image-section hidden-left align-left">
@@ -57,12 +59,13 @@
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
+  <!-- Görgetésfigyelő script -->
   <script>
-    const hiddenElements = document.querySelectorAll('.hidden, .hidden-left, .hidden-right');
+    const hiddenEls = document.querySelectorAll('.hidden, .hidden-left, .hidden-right');
     window.addEventListener('scroll', () => {
-      const triggerPoint = window.innerHeight * 0.8;
-      hiddenElements.forEach(el => {
-        if (el.getBoundingClientRect().top < triggerPoint) {
+      const trigger = window.innerHeight * 0.8;
+      hiddenEls.forEach(el => {
+        if (el.getBoundingClientRect().top < trigger) {
           el.classList.add('visible');
         }
       });
