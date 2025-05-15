@@ -53,7 +53,7 @@ video {
 }
 
 .pics1-image {
-  width: 650px;
+  width: 650px; 
   max-width: 90%;
   border-radius: 20px;
   opacity: 0;
@@ -67,7 +67,7 @@ video {
 }
 
 .postit-image {
-  width: 500px;
+  width: 420px;
   max-width: 90%;
   border-radius: 20px;
   opacity: 0;
@@ -116,7 +116,7 @@ video {
 }
 
 .step-image {
-  width: 600px;
+  width: 700px;
   max-width: 95%;
   height: auto;
   display: block;
@@ -193,8 +193,9 @@ footer {
   transform: translateY(0);
 }
 
-/* 🔽 ÚJ: Poptin űrlap középre igazítása */
+/* ÚJ: Poptin középre igazítás */
 .poptin-wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin: 40px 0;
