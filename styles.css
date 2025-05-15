@@ -1,10 +1,9 @@
-/* Alapok */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 220% 220%;
+  background-size: 150% 150%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,9 +45,10 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Intro szekció (nagy kép és postit) */
+/* Intro szekció (képek) */
 .intro-section {
   width: 100vw;
+  height: auto;
   margin: 0;
   padding: 0 5%;
   overflow: hidden;
@@ -57,7 +57,8 @@ video {
   transition: all 1s ease-out;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .intro-section.visible {
@@ -65,105 +66,85 @@ video {
   opacity: 1;
 }
 
-/* pics1.png kép nagyobbítás, balra igazítás, keret */
-.scroll-image.with-border {
-  width: 750px; /* nagyobb */
+.scroll-image {
+  width: 650px; /* nagyobb méret */
   max-width: 100%;
   height: auto;
-  border: 6px solid rgba(92, 225, 230, 0.7);
-  border-radius: 20px;
-  align-self: flex-start;
+  object-fit: cover;
+  display: block;
+  align-self: flex-start; /* balra igazítás */
+  border: 3px solid rgba(200, 200, 200, 0.7); /* keret a pics1.png-nek */
+  border-radius: 15px;
 }
 
-/* postit.png kép nagyobbítás és jobbra igazítás */
-.scroll-image.postit-image {
-  width: 500px; /* nagyobb */
+/* postit kép */
+.postit-image {
+  width: 280px; /* nagyobb méret */
   max-width: 100%;
   height: auto;
-  align-self: flex-end;
-}
-
-/* Animáció postitnak (jobbról balra) */
-.hidden-postit {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 1s ease-out;
-}
-
-.hidden-postit.visible {
-  opacity: 1;
-  transform: translateX(0);
+  display: block;
+  align-self: flex-end; /* jobbra igazítás */
+  border-radius: 15px;
 }
 
 /* Cím */
 .scroll-title {
-  display: inline-block;       /* csak a szöveg méretében legyen a háttér */
-  padding: 10px 30px;          /* belső margó, hogy legyen hely a háttérnek */
+  display: inline-block;
+  padding: 10px 30px;
   background-color: rgba(128, 128, 128, 0.5);
   border-radius: 15px;
   color: white;
   font-family: 'Yellowtail', cursive;
   font-size: 48px;
-  margin: 40px auto;           /* középre helyezés miatt */
+  margin: 40px auto;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
   text-align: center;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-.scroll-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-  display: inline-block;
-}
-
-/* STEP szekciók - külön megjelenítés, balról jobbra animáció */
-.step-section {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
+/* Step szekciók */
 .step-image-section {
+  width: 100%;
   opacity: 0;
   transform: translateX(-100px);
   transition: all 1s ease-out;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-/* amikor látható */
 .step-image-section.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Step képek mérete - nagyobbítva */
 .step-image {
-  width: 600px;
+  width: 400px; /* nagyobb képek */
   max-width: 100%;
   height: auto;
-  display: inline-block;
+  border-radius: 15px;
 }
 
-/* Igazítások a step képekhez */
-.align-left {
-  margin-left: 0;
+/* Képek igazítása a step szekciókon belül */
+.step-left {
+  margin-left: 5%;
   margin-right: auto;
-  display: block;
+  align-self: flex-start;
 }
 
-.align-center {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.step-center {
+  margin: 0 auto;
+  align-self: center;
 }
 
-.align-right {
+.step-right {
   margin-left: auto;
-  margin-right: 0;
-  display: block;
+  margin-right: 5%;
+  align-self: flex-end;
 }
 
 /* Lábléc */
