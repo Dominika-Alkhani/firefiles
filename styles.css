@@ -132,7 +132,6 @@ video {
 
 .center-align {
   text-align: center;
-  transform: translateY(50px);
 }
 
 .right-align {
