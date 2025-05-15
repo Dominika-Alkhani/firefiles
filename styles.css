@@ -46,9 +46,10 @@ video {
 .image-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* ez maradhat, de a postit-et jobbra toljuk máshogy */
   gap: 30px;
   padding: 40px 5%;
+  position: relative;
 }
 
 .pics1-image {
@@ -66,13 +67,14 @@ video {
 }
 
 .postit-image {
-  width: 800px;
-  max-width: 95%;
-  align-self: flex-end;
+  width: 400px; /* kisebb méret */
+  max-width: 90%;
   border-radius: 20px;
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s ease-out;
+
+  align-self: flex-end; /* ez jobbra tolja a flexboxon belül */
 }
 
 .postit-image.visible {
