@@ -97,22 +97,24 @@ video {
 
 /* Cím */
 .scroll-title {
-  text-align: center;
-  font-family: 'Yellowtail', cursive;
-  font-size: 48px;
-  color: white;
-  margin: 40px 0;
-  padding: 10px 20px;
+  display: inline-block;       /* csak a szöveg méretében legyen a háttér */
+  padding: 10px 30px;          /* belső margó, hogy legyen hely a háttérnek */
   background-color: rgba(128, 128, 128, 0.5);
   border-radius: 15px;
+  color: white;
+  font-family: 'Yellowtail', cursive;
+  font-size: 48px;
+  margin: 40px auto;           /* középre helyezés miatt */
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
+  text-align: center;
 }
 
 .scroll-title.visible {
   opacity: 1;
   transform: translateY(0);
+  display: inline-block;
 }
 
 /* STEP szekciók - külön megjelenítés, balról jobbra animáció */
