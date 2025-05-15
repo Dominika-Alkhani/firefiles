@@ -3,13 +3,12 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: cover;
+  background-size: 120%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Videó */
 video {
   width: 100%;
   height: 60vh;
@@ -17,7 +16,6 @@ video {
   display: block;
 }
 
-/* Menüsor */
 .navbar {
   margin: 20px auto;
   width: fit-content;
@@ -45,7 +43,6 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Képek szekció */
 .image-section {
   display: flex;
   flex-direction: column;
@@ -55,7 +52,7 @@ video {
 }
 
 .pics1-image {
-  width: 800px;
+  width: 900px;
   max-width: 95%;
   border-radius: 20px;
   opacity: 0;
@@ -69,7 +66,7 @@ video {
 }
 
 .postit-image {
-  width: 700px;
+  width: 800px;
   max-width: 95%;
   align-self: flex-end;
   border-radius: 20px;
@@ -83,7 +80,6 @@ video {
   transform: translateX(0);
 }
 
-/* Cím */
 .scroll-title {
   text-align: center;
   margin: 40px 0;
@@ -106,7 +102,6 @@ video {
   font-size: 48px;
 }
 
-/* Step szekciók */
 .step-image-section {
   width: 100%;
   margin-bottom: 40px;
@@ -121,7 +116,7 @@ video {
 }
 
 .step-image {
-  width: 600px;
+  width: 700px;
   max-width: 95%;
   height: auto;
   display: block;
@@ -142,7 +137,6 @@ video {
   padding-right: 5%;
 }
 
-/* Extra kép a step3 alatt */
 .image-below-step3 {
   width: 100%;
   display: flex;
@@ -159,13 +153,12 @@ video {
 }
 
 .extra-image {
-  width: 700px;
+  width: 400px;
   max-width: 90%;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Lábléc */
 footer {
   text-align: center;
   padding: 10px;
@@ -173,13 +166,16 @@ footer {
   background-color: #333;
 }
 
-/* Animáció alap */
 .hidden {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
 }
 
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .visible {
   opacity: 1;
   transform: translateY(0);
