@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 150% 150%;
+  background-size: 200% 200%;  /* nagyobb háttér */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-/* Intro szekció (képek) */
+/* Intro szekció */
 .intro-section {
   width: 100vw;
   height: auto;
@@ -57,7 +57,6 @@ video {
   transition: all 1s ease-out;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 20px;
 }
 
@@ -67,24 +66,34 @@ video {
 }
 
 .scroll-image {
-  width: 650px; /* nagyobb méret */
+  width: 700px; /* nagyobb kép */
   max-width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
   align-self: flex-start; /* balra igazítás */
-  border: 3px solid rgba(200, 200, 200, 0.7); /* keret a pics1.png-nek */
+  border: 3px solid rgba(200, 200, 200, 0.7);
   border-radius: 15px;
 }
 
 /* postit kép */
 .postit-image {
-  width: 280px; /* nagyobb méret */
+  width: 320px; /* nagyobb kép */
   max-width: 100%;
   height: auto;
   display: block;
   align-self: flex-end; /* jobbra igazítás */
   border-radius: 15px;
+
+  /* Gördülésre jobbról balra */
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+
+.postit-image.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Cím */
@@ -96,14 +105,18 @@ video {
   color: white;
   font-family: 'Yellowtail', cursive;
   font-size: 48px;
-  margin: 40px auto;
+  margin: 0 auto 40px auto;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
   text-align: center;
-  line-height: 1.2;
-  vertical-align: middle;
   white-space: nowrap;
+  align-self: center;
+}
+
+.scroll-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Step szekciók */
@@ -123,7 +136,7 @@ video {
 }
 
 .step-image {
-  width: 400px; /* nagyobb képek */
+  width: 400px;
   max-width: 100%;
   height: auto;
   border-radius: 15px;
