@@ -23,11 +23,13 @@
     </ul>
   </nav>
 
-  <!-- Nagy kép szekció: pics1 + postit -->
-  <section class="intro-section hidden">
-    <div class="intro-container">
-      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image intro-image left" />
-      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it kép" class="scroll-image intro-image right" />
+  <!-- Képek szekció -->
+  <section class="image-section">
+    <div class="image-container hidden-left">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="main-image" />
+    </div>
+    <div class="image-container hidden-right">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it kép" class="postit-image" />
     </div>
   </section>
 
@@ -56,12 +58,28 @@
 
   <!-- Görgetésfigyelő script -->
   <script>
-    const sections = document.querySelectorAll('.hidden');
+    const hiddenLeft = document.querySelectorAll('.hidden-left');
+    const hiddenRight = document.querySelectorAll('.hidden-right');
+    const hiddenGeneric = document.querySelectorAll('.hidden');
+
     window.addEventListener('scroll', () => {
       const triggerPoint = window.innerHeight * 0.8;
-      sections.forEach(section => {
+
+      hiddenGeneric.forEach(section => {
         if (section.getBoundingClientRect().top < triggerPoint) {
           section.classList.add('visible');
+        }
+      });
+
+      hiddenLeft.forEach(el => {
+        if (el.getBoundingClientRect().top < triggerPoint) {
+          el.classList.add('slide-in-left');
+        }
+      });
+
+      hiddenRight.forEach(el => {
+        if (el.getBoundingClientRect().top < triggerPoint) {
+          el.classList.add('slide-in-right');
         }
       });
     });
