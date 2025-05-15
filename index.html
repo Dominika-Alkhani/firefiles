@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
 </head>
 <body>
-
   <!-- Videó -->
   <video autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4" />
@@ -24,53 +23,43 @@
     </ul>
   </nav>
 
-  <!-- Intro szekció -->
-  <section class="intro-section">
-    <div class="main-image-container hidden-left">
-      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="main-image" />
-    </div>
-    <div class="postit-image-container hidden-right">
-      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it kép" class="postit-image" />
-    </div>
+  <!-- Nagy kép és postit -->
+  <section class="intro-section hidden">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="scroll-image with-border" />
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Postit" class="scroll-image postit-image" />
   </section>
 
   <!-- Cím -->
-  <h2 class="scroll-title hidden">
-    Hogyan tudsz hozzánk csatlakozni?
-  </h2>
+  <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
 
-  <!-- Step 1 -->
-  <section class="step-image-section hidden-left align-left">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
-  </section>
-
-  <!-- Step 2 -->
-  <section class="step-image-section hidden-left align-center">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
-  </section>
-
-  <!-- Step 3 -->
-  <section class="step-image-section hidden-left align-right">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
-  </section>
+  <!-- STEP BLOKK – közös szürke háttér -->
+  <div class="step-container hidden-left">
+    <div class="align-left">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
+    </div>
+    <div class="align-center">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
+    </div>
+    <div class="align-right">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
+    </div>
+  </div>
 
   <!-- Lábléc -->
   <footer>
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
-  <!-- Görgetésfigyelő script -->
   <script>
-    const hiddenEls = document.querySelectorAll('.hidden, .hidden-left, .hidden-right');
+    const sections = document.querySelectorAll('.hidden, .hidden-left');
     window.addEventListener('scroll', () => {
-      const trigger = window.innerHeight * 0.8;
-      hiddenEls.forEach(el => {
-        if (el.getBoundingClientRect().top < trigger) {
-          el.classList.add('visible');
+      const triggerPoint = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
         }
       });
     });
   </script>
-
 </body>
 </html>
