@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 150% 150%; /* nagyobb méret */
+  background-size: 200% 200%; /* Még nagyobb háttér */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,6 +53,7 @@ video {
   padding: 40px 5%;
 }
 
+/* Első kép (balra igazítva, nagyobb) */
 .main-image-container {
   align-self: flex-start;
 }
@@ -64,6 +65,7 @@ video {
   display: block;
 }
 
+/* Második kép (jobbra igazítva, nagyobb) */
 .postit-image-container {
   align-self: flex-end;
 }
@@ -116,14 +118,14 @@ video {
   transform: translateY(0);
 }
 
-/* Step képek */
+/* Step szekciók */
 .step-image-section {
   width: 100%;
   margin-bottom: 40px;
 }
 
 .step-image {
-  width: 400px; /* nagyobb méret */
+  width: 450px; /* nagyobb kép */
   max-width: 100%;
   height: auto;
   display: inline-block;
