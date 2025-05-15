@@ -164,7 +164,7 @@ video {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
-  color: white; /* FONT SZÍN HOZZÁADVA */
+  color: white; /* FONT SZÍN */
 }
 
 .image-below-step3.visible {
