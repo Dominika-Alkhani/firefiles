@@ -67,7 +67,7 @@ video {
 }
 
 .postit-image {
-  width: 420px; /* kisebb lett */
+  width: 500px; /* kisebb lett */
   max-width: 90%;
   border-radius: 20px;
   opacity: 0;
@@ -116,7 +116,7 @@ video {
 }
 
 .step-image {
-  width: 700px;
+  width: 600px;
   max-width: 95%;
   height: auto;
   display: block;
