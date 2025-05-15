@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: 200%; /* még nagyobb háttérkép */
+  background-size: 200%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,14 +46,14 @@ video {
 .image-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* a post-it-et külön kezeljük */
+  align-items: flex-start;
   gap: 30px;
   padding: 40px 5%;
   position: relative;
 }
 
 .pics1-image {
-  width: 650px; 
+  width: 650px;
   max-width: 90%;
   border-radius: 20px;
   opacity: 0;
@@ -67,7 +67,7 @@ video {
 }
 
 .postit-image {
-  width: 500px; /* kisebb lett */
+  width: 500px;
   max-width: 90%;
   border-radius: 20px;
   opacity: 0;
@@ -123,7 +123,6 @@ video {
   border-radius: 20px;
 }
 
-/* Balra igazított szekció */
 .left-align {
   text-align: left;
   padding-left: 5%;
@@ -134,7 +133,6 @@ video {
   margin-right: auto;
 }
 
-/* Középre igazított szekció */
 .center-align {
   text-align: center;
 }
@@ -143,7 +141,6 @@ video {
   margin: 0 auto;
 }
 
-/* Jobbra igazított szekció */
 .right-align {
   text-align: right;
   padding-right: 5%;
@@ -164,7 +161,6 @@ video {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
-  color: white; /* FONT SZÍN */
 }
 
 .image-below-step3.visible {
@@ -195,4 +191,11 @@ footer {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 🔽 ÚJ: Poptin űrlap középre igazítása */
+.poptin-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
 }
