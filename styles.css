@@ -63,9 +63,9 @@ video {
   max-width: 1000px;
   height: auto;
   display: block;
-  border: 5px solid white;              /* Fehér keret */
-  border-radius: 20px;                  /* Lekerekített sarkok */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Árnyék */
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Második kép (jobbra igazítva, nagyobb) */
@@ -109,11 +109,11 @@ video {
   text-align: center;
   font-family: 'Yellowtail', cursive;
   font-size: 48px;
-  color: white; /* → Fehér szöveg */
+  color: white;
   margin: 40px auto;
   padding: 20px;
   max-width: 80%;
-  background-color: rgba(100, 100, 100, 0.4); /* áttetsző szürke háttér */
+  background-color: rgba(100, 100, 100, 0.4);
   border-radius: 20px;
   opacity: 0;
   transform: translateY(50px);
@@ -125,12 +125,18 @@ video {
   transform: translateY(0);
 }
 
-/* Step szekciók */
+/* Step szekciók – szürke háttérrel */
 .step-image-section {
   width: 100%;
   margin-bottom: 40px;
+  padding: 30px;
+  background-color: rgba(100, 100, 100, 0.4); /* áttetsző szürke háttér */
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 1s ease-out;
 }
 
+/* Képstílus */
 .step-image {
   width: 500px;
   max-width: 100%;
