@@ -22,7 +22,6 @@ video {
   margin: 20px auto;
   width: fit-content;
 }
-
 .navbar ul {
   list-style: none;
   display: flex;
@@ -30,7 +29,6 @@ video {
   padding: 0;
   margin: 0;
 }
-
 .navbar ul li a {
   color: white;
   text-decoration: none;
@@ -40,7 +38,6 @@ video {
   background-color: rgba(100, 100, 100, 0.4);
   transition: background-color 0.3s ease;
 }
-
 .navbar ul li a:hover {
   background-color: rgba(160, 160, 160, 0.8);
 }
@@ -53,11 +50,10 @@ video {
   padding: 40px 5%;
 }
 
-/* Első kép (balra igazítva, nagyobb, kerettel) */
+/* Első kép (balra igazítva, kerettel) */
 .main-image-container {
   align-self: flex-start;
 }
-
 .main-image {
   width: 95%;
   max-width: 1000px;
@@ -68,11 +64,10 @@ video {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Második kép (jobbra igazítva, nagyobb) */
+/* Második kép (jobbra igazítva) */
 .postit-image-container {
   align-self: flex-end;
 }
-
 .postit-image {
   width: 500px;
   max-width: 100%;
@@ -86,19 +81,16 @@ video {
   transform: translateX(-100px);
   transition: all 1s ease-out;
 }
-
 .hidden-right {
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s ease-out;
 }
-
 .hidden {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
 }
-
 .visible {
   opacity: 1;
   transform: translateX(0) translateY(0);
@@ -119,21 +111,25 @@ video {
   transform: translateY(50px);
   transition: all 1s ease-out;
 }
-
 .scroll-title.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Step szekciók – szürke háttérrel */
+/* Step szekciók – áttetsző szürke háttérrel */
 .step-image-section {
   width: 100%;
   margin-bottom: 40px;
   padding: 30px;
-  background-color: rgba(100, 100, 100, 0.4); /* áttetsző szürke háttér */
+  background-color: rgba(100, 100, 100, 0.4);
   border-radius: 20px;
   opacity: 0;
+  transform: translateX(-100px);
   transition: all 1s ease-out;
+}
+.step-image-section.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Képstílus */
@@ -149,11 +145,9 @@ video {
   text-align: left;
   padding-left: 5%;
 }
-
 .align-center {
   text-align: center;
 }
-
 .align-right {
   text-align: right;
   padding-right: 5%;
