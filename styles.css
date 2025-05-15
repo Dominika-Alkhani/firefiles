@@ -2,13 +2,14 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 200% 200%;
+  background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* Videó */
 video {
   width: 100%;
   height: 60vh;
@@ -16,6 +17,7 @@ video {
   display: block;
 }
 
+/* Menüsor */
 .navbar {
   margin: 20px auto;
   width: fit-content;
@@ -43,45 +45,34 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
-.intro-section {
-  width: 100vw;
-  height: auto;
-  margin: 0;
-  padding: 0 5%;
-  overflow: hidden;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 1s ease-out;
+/* Képek szekció */
+.image-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 5%;
 }
 
-.intro-section.visible {
-  transform: translateY(0);
+.pics1-image {
+  width: 800px;
+  max-width: 95%;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+
+.pics1-image.visible {
   opacity: 1;
+  transform: translateX(0);
 }
 
-.scroll-image {
-  width: 850px;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  align-self: flex-start;
-  border: 3px solid rgba(200, 200, 200, 0.7);
-  border-radius: 15px;
-}
-
-/* postit kép nagyobb */
 .postit-image {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-  display: block;
+  width: 700px;
+  max-width: 95%;
   align-self: flex-end;
-  border-radius: 15px;
-
+  border-radius: 20px;
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s ease-out;
@@ -92,21 +83,13 @@ video {
   transform: translateX(0);
 }
 
+/* Cím */
 .scroll-title {
-  display: inline-block;
-  padding: 10px 30px;
-  background-color: rgba(128, 128, 128, 0.5);
-  border-radius: 15px;
-  color: white;
-  font-family: 'Yellowtail', cursive;
-  font-size: 48px;
-  margin: 0 auto 40px auto;
+  text-align: center;
+  margin: 40px 0;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
-  text-align: center;
-  white-space: nowrap;
-  align-self: center;
 }
 
 .scroll-title.visible {
@@ -114,14 +97,22 @@ video {
   transform: translateY(0);
 }
 
+.title-bg {
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Yellowtail', cursive;
+  font-size: 48px;
+}
+
+/* Step szekciók */
 .step-image-section {
   width: 100%;
+  margin-bottom: 40px;
   opacity: 0;
   transform: translateX(-100px);
   transition: all 1s ease-out;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
 }
 
 .step-image-section.visible {
@@ -130,32 +121,66 @@ video {
 }
 
 .step-image {
-  width: 500px;
-  max-width: 100%;
+  width: 600px;
+  max-width: 95%;
   height: auto;
-  border-radius: 15px;
+  display: block;
+  border-radius: 20px;
 }
 
-.step-left {
-  margin-left: 5%;
-  margin-right: auto;
-  align-self: flex-start;
+.left-align {
+  text-align: left;
+  padding-left: 5%;
 }
 
-.step-center {
-  margin: 0 auto;
-  align-self: center;
+.center-align {
+  text-align: center;
 }
 
-.step-right {
-  margin-left: auto;
-  margin-right: 5%;
-  align-self: flex-end;
+.right-align {
+  text-align: right;
+  padding-right: 5%;
 }
 
+/* Extra kép a step3 alatt */
+.image-below-step3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.image-below-step3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.extra-image {
+  width: 700px;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Lábléc */
 footer {
   text-align: center;
   padding: 10px;
   color: white;
   background-color: #333;
+}
+
+/* Animáció alap */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
