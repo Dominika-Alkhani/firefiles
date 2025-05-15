@@ -42,6 +42,11 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
 
+  <!-- 🔽 Poptin űrlap középen -->
+  <div class="poptin-wrapper">
+    <div class="poptin-embedded" data-id="ace60817c8cd2"></div>
+  </div>
+
   <section class="image-below-step3 hidden">
     <h2 class="scroll-title">
       <span class="title-bg">Az üzleti része is érdekel?</span>
@@ -53,19 +58,20 @@
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
- <script>
-  const sections = document.querySelectorAll('.hidden');
-  function checkVisibility() {
-    const triggerPoint = window.innerHeight * 0.8;
-    sections.forEach(section => {
-      if (section.getBoundingClientRect().top < triggerPoint) {
-        section.classList.add('visible');
-        section.classList.remove('hidden');
-      }
+  <!-- 🔽 Görgetésre látható elemek -->
+  <script>
+    const sections = document.querySelectorAll('.hidden');
+    window.addEventListener('scroll', () => {
+      const triggerPoint = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
+        }
+      });
     });
-  }
-  window.addEventListener('scroll', checkVisibility);
-  window.addEventListener('load', checkVisibility);
-</script>
+  </script>
+
+  <!-- 🔽 Poptin embed script -->
+  <script src="https://cdn.popt.in/pixel.js?id=ace60817c8cd2" async></script>
 </body>
 </html>
