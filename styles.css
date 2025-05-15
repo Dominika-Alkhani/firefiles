@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/background.png');
-  background-size: 180% 180%;
+  background-size: 220% 220%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,7 +49,6 @@ video {
 /* Intro szekció (nagy kép és postit) */
 .intro-section {
   width: 100vw;
-  height: auto;
   margin: 0;
   padding: 0 5%;
   overflow: hidden;
@@ -57,9 +56,8 @@ video {
   opacity: 0;
   transition: all 1s ease-out;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .intro-section.visible {
@@ -74,6 +72,7 @@ video {
   height: auto;
   border: 6px solid rgba(92, 225, 230, 0.7);
   border-radius: 20px;
+  align-self: flex-start;
 }
 
 /* postit.png kép nagyobbítás és jobbra igazítás */
@@ -81,8 +80,19 @@ video {
   width: 400px;
   max-width: 100%;
   height: auto;
-  align-self: flex-start;
-  margin-left: auto;
+  align-self: flex-end;
+}
+
+/* Animáció postitnak (jobbról balra) */
+.hidden-postit {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+
+.hidden-postit.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Cím */
@@ -105,37 +115,26 @@ video {
   transform: translateY(0);
 }
 
-/* Step container - közös szürke átlátszó, lekerekített háttér */
-.step-container {
-  margin: 60px auto;
-  padding: 40px 20px;
-  background-color: rgba(100, 100, 100, 0.4);
-  border-radius: 20px;
+/* STEP szekciók - külön megjelenítés, balról jobbra animáció */
+.step-section {
   max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.step-image-section {
   opacity: 0;
   transform: translateX(-100px);
   transition: all 1s ease-out;
 }
 
-.step-container.visible {
+/* amikor látható */
+.step-image-section.visible {
   opacity: 1;
   transform: translateX(0);
-}
-
-/* Egyes képek igazítása a step blokkban */
-.align-left {
-  text-align: left;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
 }
 
 /* Step képek mérete */
@@ -146,26 +145,26 @@ video {
   display: inline-block;
 }
 
+/* Igazítások a step képekhez */
+.align-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.align-center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.align-right {
+  text-align: right;
+  margin-right: 0;
+}
+
 /* Lábléc */
 footer {
   text-align: center;
   padding: 10px;
   color: white;
   background-color: #333;
-}
-
-/* Animációhoz használt hidden osztályok */
-.hidden, .hidden-left {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.hidden-left {
-  transform: translateX(-100px);
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0) translateX(0);
 }
