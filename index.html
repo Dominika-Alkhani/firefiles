@@ -2,17 +2,19 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utazási Weboldal</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Videó -->
   <video autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4" />
     A böngésződ nem támogatja a videólejátszást.
   </video>
 
+  <!-- Menüsor -->
   <nav class="navbar">
     <ul>
       <li><a href="#home">Főoldal</a></li>
@@ -21,29 +23,43 @@
     </ul>
   </nav>
 
-  <section class="intro-section hidden">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/pics1.png" alt="Utazás kép" class="scroll-image" />
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/postit.png" alt="Postit kép" class="postit-image hidden" />
+  <!-- Képek szekció -->
+  <section class="image-section">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="pics1-image hidden" />
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it" class="postit-image hidden" />
   </section>
 
-  <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
+  <!-- Cím -->
+  <h2 class="scroll-title hidden">
+    <span class="title-bg">Hogyan tudsz hozzánk csatlakozni?</span>
+  </h2>
 
-  <section class="step-image-section hidden" id="step1">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/step1.png" alt="Step 1" class="step-image step-left" />
+  <!-- Step 1 -->
+  <section class="step-image-section hidden left-align" id="step1">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
   </section>
 
-  <section class="step-image-section hidden" id="step2">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/step2.png" alt="Step 2" class="step-image step-center" />
+  <!-- Step 2 -->
+  <section class="step-image-section hidden center-align" id="step2">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
   </section>
 
-  <section class="step-image-section hidden" id="step3">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/refs/heads/main/step3.png" alt="Step 3" class="step-image step-right" />
+  <!-- Step 3 -->
+  <section class="step-image-section hidden right-align" id="step3">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
 
+  <!-- Extra kép step3 alatt -->
+  <section class="image-below-step3 hidden">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics2(2).png" alt="Extra kép" class="extra-image" />
+  </section>
+
+  <!-- Lábléc -->
   <footer>
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
+  <!-- Scroll JS -->
   <script>
     const sections = document.querySelectorAll('.hidden');
     window.addEventListener('scroll', () => {
@@ -57,4 +73,3 @@
   </script>
 </body>
 </html>
-
