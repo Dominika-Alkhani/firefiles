@@ -67,14 +67,14 @@ video {
 }
 
 .postit-image {
-  width: 400px; /* kisebb méret */
+  width: 500px; /* korábban 400px volt */
   max-width: 90%;
   border-radius: 20px;
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s ease-out;
 
-  align-self: flex-end; /* ez jobbra tolja a flexboxon belül */
+  align-self: flex-end;
 }
 
 .postit-image.visible {
