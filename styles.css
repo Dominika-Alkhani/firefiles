@@ -135,6 +135,21 @@ video {
   margin: 0 auto;
 }
 
+.poptin-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  width: 100%;
+}
+
+.poptin-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 footer {
   text-align: center;
   padding: 10px;
