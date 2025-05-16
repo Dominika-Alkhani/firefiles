@@ -1,39 +1,53 @@
-body {
-  font-family: 'Arial', sans-serif;
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
   background-size: 200%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
 }
 
+/* Videó teljes háttérként */
 video {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 60vh;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  z-index: -1;
 }
 
+/* Navigációs sáv */
 .navbar {
-  margin: 20px auto;
-  width: fit-content;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .navbar ul li a {
   color: white;
   text-decoration: none;
-  padding: 10px 16px;
+  font-weight: bold;
   font-size: 18px;
+  padding: 10px 16px;
   border-radius: 10px;
   background-color: rgba(100, 100, 100, 0.4);
   transition: background-color 0.3s ease;
@@ -43,12 +57,13 @@ video {
   background-color: rgba(160, 160, 160, 0.8);
 }
 
+/* Képrész és elrendezés */
 .image-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 40px 5%;
+  padding: 120px 5% 40px; /* Padding top nagyobb, hogy a navbar alá kerüljön */
   position: relative;
 }
 
@@ -66,12 +81,21 @@ video {
   transform: translateX(0);
 }
 
+/* Két kép egysorban */
 .row-images {
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 1000px;
   gap: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.row-images.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .left-image {
@@ -84,12 +108,13 @@ video {
   border-radius: 20px;
 }
 
+/* Cím és háttér */
 .scroll-title {
   text-align: center;
   margin: 40px 0;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 1s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .scroll-title.visible {
@@ -106,16 +131,18 @@ video {
   font-size: 48px;
 }
 
+/* Lépés szekciók */
 .step-image-section {
   width: 100%;
   margin-bottom: 40px;
   opacity: 0;
-  transition: all 1s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .step-image-section.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .step-image {
@@ -124,17 +151,23 @@ video {
   height: auto;
   display: block;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
+/* Igazítások */
 .center-align {
   text-align: center;
 }
 
-.center-align .step-image {
-  margin: 0 auto;
+.left-align {
+  text-align: left;
 }
 
-.poptin-wrapper,
+.right-align {
+  text-align: right;
+}
+
+/* Poptin form szekció */
 .form-section {
   display: flex;
   justify-content: center;
@@ -142,26 +175,29 @@ video {
   width: 100%;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 1s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.poptin-wrapper.visible,
 .form-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
   color: white;
   background-color: #333;
+  position: relative;
+  z-index: 10;
 }
 
+/* Általános animációk rejtés / megjelenés */
 .hidden {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .visible {
