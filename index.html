@@ -61,6 +61,7 @@
       const triggerPoint = window.innerHeight * 0.8;
       sections.forEach(section => {
         if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.remove('hidden');
           section.classList.add('visible');
         }
       });
