@@ -46,7 +46,7 @@ video {
 .image-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   padding: 40px 5%;
   position: relative;
@@ -66,19 +66,23 @@ video {
   transform: translateX(0);
 }
 
-.postit-image {
-  width: 500px;
-  max-width: 90%;
-  border-radius: 20px;
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 1s ease-out;
-  align-self: flex-end;
+/* ÚJ: Két kép egysorban */
+.row-images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  gap: 20px;
 }
 
-.postit-image.visible {
-  opacity: 1;
-  transform: translateX(0);
+.left-image {
+  width: 48%;
+  border-radius: 20px;
+}
+
+.right-image {
+  width: 48%;
+  border-radius: 20px;
 }
 
 .scroll-title {
@@ -123,32 +127,12 @@ video {
   border-radius: 20px;
 }
 
-.left-align {
-  text-align: left;
-  padding-left: 5%;
-}
-
-.left-align .step-image {
-  margin-left: 0;
-  margin-right: auto;
-}
-
 .center-align {
   text-align: center;
 }
 
 .center-align .step-image {
   margin: 0 auto;
-}
-
-.right-align {
-  text-align: right;
-  padding-right: 5%;
-}
-
-.right-align .step-image {
-  margin-left: auto;
-  margin-right: 0;
 }
 
 footer {
@@ -167,29 +151,4 @@ footer {
 .visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* ÚJ: Képek egymás mellett balra-jobbra */
-.side-by-side-images {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 5%;
-  gap: 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.side-by-side-images.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.left-image,
-.right-image {
-  width: 45%;
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
