@@ -149,41 +149,7 @@ video {
   margin: 0 auto;
 }
 
-.form-and-image-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 40px auto;
-  flex-wrap: wrap;
-}
 
-.form-wrapper {
-  flex: 1 1 600px;
-  max-width: 600px;
-  min-width: 320px;
-}
-
-.form-iframe {
-  border-radius: 12px;
-  width: 100%;
-  height: 550px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.fontos-image-container {
-  flex: 1 1 300px;
-  max-width: 350px;
-  text-align: center;
-}
-
-.fontos-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
 footer {
   text-align: center;
   padding: 10px;
@@ -210,26 +176,4 @@ footer {
     background-position: center center !important;
     background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
   }
-  .form-and-image-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-wrapper,
-  .fontos-image-container {
-    width: 100%;
-    max-width: 100%;
-  }
-
- .form-iframe {
-    height: 450px;
-  }
-}
-
-  .fontos-image {
-    max-width: 300px;
-  }
-}
-
   
-
