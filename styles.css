@@ -164,9 +164,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-size: cover !important;       /* kitölti a teljes hátteret */
-    background-attachment: scroll !important; /* kikapcsoljuk a fixed-et mobilon */
+  html, body {
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
+    background-size: cover !important;
+    background-attachment: scroll !important;
     background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 }
