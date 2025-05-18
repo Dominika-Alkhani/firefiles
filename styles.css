@@ -1,11 +1,26 @@
-body {
-  font-family: 'Arial', sans-serif;
+/* --- Alapok --- */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: transparent; /* ne legyen háttér a body-n */
+}
+
+/* Háttér div, fix pozícióban a tartalom mögött */
+#background-div {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: cover;       /* maradhat, mert jobb mint contain */
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 200%;   /* nagyítás, hogy éles legyen */
+  z-index: -1;             /* tartalom mögé */
+  pointer-events: none;    /* ne akadályozza a kattintásokat */
+}
+
 
 
 video {
@@ -162,10 +177,12 @@ footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* Mobilon inkább scroll, mert fix néha nem jól működik */
+/* Mobil nézet */
 @media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
+  /* Háttér kitöltése mobilon */
+  #background-div {
+    background-size: cover;
+    background-position: center center;
   }
 
   .image-section {
@@ -177,15 +194,5 @@ footer {
   .step-image-section,
   .form-section {
     background-color: transparent;
-  }
-}
-
-/* Nagyobb képernyőkön (pl. 1600px fölött) maradhat vagy állíthatod finomra */
-@media (min-width: 1600px) {
-  body {
-    /* Ez opcionális, ha nem tetszik a cover nagy képernyőn */
-    /* background-size: auto 100vh; */
-    background-size: cover;
-    background-position: center center;
   }
 }
