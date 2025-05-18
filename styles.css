@@ -162,3 +162,11 @@ footer {
   display: block;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover !important;       /* kitölti a teljes hátteret */
+    background-attachment: scroll !important; /* kikapcsoljuk a fixed-et mobilon */
+    background-position: center center !important;
+  }
+}
