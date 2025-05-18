@@ -181,8 +181,8 @@ video {
 }
 
 .button-image {
-  width: 220px;
-  max-width: 80%;
+  width: 300px;      /* nagyobb alapméret */
+  max-width: 90%;    /* mobilon is szépen méreteződik */
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
