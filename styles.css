@@ -5,7 +5,6 @@ body {
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
   background-size: 100%;       /* maradhat, mert jobb mint contain */
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
 
 
