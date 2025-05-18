@@ -182,6 +182,6 @@ footer {
   body {
     background-size: 100% !important;        /* kitölti a teljes képernyőt */
     background-position: center center !important;
-    background-attachment: scroll !important; /* fix helyett scroll, hogy működjön mobilon */
+    background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
   }
 }
