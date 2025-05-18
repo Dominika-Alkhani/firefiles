@@ -65,8 +65,8 @@ video {
 }
 
 .pics1-image {
-  width: 700px;
-  max-width: 90%;
+  width: 900px;         /* nagyobb méret */
+  max-width: 100%;      /* teljes szélesség, ha kisebb képernyő */
   border-radius: 20px;
   opacity: 0;
   transform: translateX(-100px);
