@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: 200%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -162,14 +162,15 @@ footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* Mobil és Safari kompatibilis háttérkép-beállítás */
-@media (max-width: 1024px) {
-  html, body {
-    height: 100%;
-    background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+@media (max-width: 768px) {
+  .image-section {
+    min-height: 100vh;
+    background-color: transparent;
+  }
+
+  .scroll-title,
+  .step-image-section,
+  .form-section {
+    background-color: transparent;
   }
 }
