@@ -78,18 +78,15 @@
   </footer>
 
   <script>
-  window.addEventListener('load', () => {
-    const video = document.querySelector('video');
-    if (video) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          // A böngésző blokkolhatja az autoplay-t, ha nem volt interakció
-          console.log("Autoplay blokk - a felhasználó kattintására vár.");
-        });
-      }
-    }
-  });
-</script>
+    const sections = document.querySelectorAll('.hidden');
+    window.addEventListener('scroll', () => {
+      const triggerPoint = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
