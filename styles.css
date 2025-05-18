@@ -185,13 +185,14 @@ footer {
     background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
   }
 
-  .fontos-image-container {
+ .fontos-image-container {
   text-align: center;
   margin: 30px auto 60px auto;
 }
 
 .fontos-image {
-  max-width: 90%;
+  width: 100%;
+  max-width: 400px;  /* korlátozza a képszélességet */
   height: auto;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
