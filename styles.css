@@ -5,11 +5,9 @@ body {
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
   background-size: 200%;       /* maradhat, mert jobb mint contain */
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */ /* Ezt mobilon már kikapcsoltuk, itt akár teljesen eltávolíthatod */
-  position: relative;
-  min-height: 100vh;
-}
+
 
 video {
   width: 100%;
