@@ -177,22 +177,11 @@ footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* Mobil nézet */
+/* Mobilra külön */
 @media (max-width: 768px) {
-  /* Háttér kitöltése mobilon */
-  #background-div {
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .image-section {
-    min-height: 100vh;
-    background-color: transparent;
-  }
-
-  .scroll-title,
-  .step-image-section,
-  .form-section {
-    background-color: transparent;
+  body {
+    background-size: cover !important;        /* kitölti a teljes képernyőt */
+    background-position: center center !important;
+    background-attachment: scroll !important; /* fix helyett scroll, hogy működjön mobilon */
   }
 }
