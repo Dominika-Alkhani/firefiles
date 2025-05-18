@@ -6,6 +6,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 video {
@@ -162,7 +163,12 @@ footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
+/* Mobilra optimalizálás */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* mobilon ne legyen fixed, jobb teljesítmény és megjelenés */
+  }
+
   .image-section {
     min-height: 100vh;
     background-color: transparent;
@@ -172,5 +178,21 @@ footer {
   .step-image-section,
   .form-section {
     background-color: transparent;
+  }
+
+  /* Képek egymás alá mobilon */
+  .row-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .left-image,
+  .right-image {
+    width: 100%;
+  }
+
+  /* Címsor betűméret és padding kisebb mobilon */
+  .title-bg {
+    font-size: 32px;
+    padding: 8px 20px;
   }
 }
