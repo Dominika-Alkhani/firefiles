@@ -149,6 +149,25 @@ video {
   margin: 0 auto;
 }
 
+/* Üzlet szekció */
+.business-section {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.business-section h2 {
+  margin-bottom: 20px;
+}
+
+.business-text {
+  font-size: 18px;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
 
 footer {
   text-align: center;
@@ -183,24 +202,6 @@ footer {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   background-color: white;
-}
-
-/* Üzlet szekció */
-.business-section {
-  padding: 40px 5%;
-  text-align: center;
-}
-
-.business-section h2 {
-  margin-bottom: 20px;
-}
-
-.business-text {
-  font-size: 18px;
-  color: #fff;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
 }
 
 
