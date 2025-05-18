@@ -168,6 +168,24 @@ footer {
   transform: translateY(0);
 }
 
+.form-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px; /* hogy ne érjen össze a következő tartalommal */
+}
+
+.form-section iframe {
+  width: 100%;
+  max-width: 400px; /* kisebb szélesség */
+  height: 500px; /* állítható magasság */
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+
 
 /* Mobilra külön */
 @media (max-width: 768px) {
@@ -177,17 +195,8 @@ footer {
     background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
   }
   
-.form-section {
-  padding: 20px 5%;
-  display: flex;
-  justify-content: center;
-}
-
 .form-section iframe {
-  width: 100%;
-  max-width: 600px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  background-color: transparent;
+    max-width: 90vw; /* mobilon majdnem teljes szélesség */
+    height: 450px;
+  }
 }
