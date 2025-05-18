@@ -180,7 +180,7 @@ footer {
 /* Mobilra külön */
 @media (max-width: 768px) {
   body {
-    background-size: cover !important;        /* kitölti a teljes képernyőt */
+    background-size: 100% !important;        /* kitölti a teljes képernyőt */
     background-position: center center !important;
     background-attachment: scroll !important; /* fix helyett scroll, hogy működjön mobilon */
   }
