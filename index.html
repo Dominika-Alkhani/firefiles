@@ -23,7 +23,8 @@
 
   <section class="image-section">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="pics1-image hidden" />
-  
+
+    <!-- ÚJ: egysorban két kép -->
     <div class="row-images hidden">
       <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics2(2).png" alt="Bal kép" class="left-image" />
       <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it" class="right-image" />
@@ -34,18 +35,10 @@
     <span class="title-bg">Hogyan tudsz hozzánk csatlakozni?</span>
   </h2>
 
-  <section class="step-image-section hidden left-align" id="step1">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
-  </section>
-
-  <section class="step-image-section hidden center-align" id="step2">
-    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
-  </section>
-
-  <section class="step-image-section hidden right-align" id="step3">
+  <!-- Középre igazított step3 -->
+  <section class="step-image-section hidden center-align" id="step3">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
-
 
   <footer>
     <p>&copy; 2025 Utazási Weboldal</p>
@@ -57,7 +50,6 @@
       const triggerPoint = window.innerHeight * 0.8;
       sections.forEach(section => {
         if (section.getBoundingClientRect().top < triggerPoint) {
-          section.classList.remove('hidden');
           section.classList.add('visible');
         }
       });
