@@ -160,16 +160,14 @@ video {
 }
 
 .form-wrapper {
-  flex: 1 1 600px;    /* minimum 600px széles legyen az űrlap, rugalmasan növekszik */
-  max-width: 700px;   /* max szélesség az űrlapnak */
-  min-width: 320px;   /* mobilméret */
+  flex: 1 1 400px;    /* kisebb minimum szélesség */
+  max-width: 450px;   /* kisebb max szélesség */
+  min-width: 320px;
 }
 
 .form-iframe {
-  border-radius: 12px;
   width: 100%;
-  height: 550px;       /*  kicsit kisebb, ha túl magas */
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  height: 500px;      /* alacsonyabb magasság */
 }
 
 .fontos-image-container {
@@ -231,9 +229,10 @@ footer {
     max-width: 100%;
   }
 
-  .form-iframe {
+ .form-iframe {
     height: 450px;
   }
+}
 
   .fontos-image {
     max-width: 300px;
