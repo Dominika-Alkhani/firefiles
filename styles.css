@@ -177,3 +177,17 @@ footer {
     background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
   }
   
+.form-section {
+  padding: 20px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-section iframe {
+  width: 100%;
+  max-width: 600px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
