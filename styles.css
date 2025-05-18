@@ -160,27 +160,22 @@ video {
 }
 
 .form-wrapper {
-  flex: 1 1 400px;    /* kisebb minimum szélesség */
-  max-width: 450px;   /* kisebb max szélesség */
+  flex: 1 1 400px;     /* kisebb minimális szélesség */
+  max-width: 480px;    /* kisebb max szélesség */
   min-width: 320px;
 }
 
 .form-iframe {
   width: 100%;
-  height: 500px;      /* alacsonyabb magasság */
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 .fontos-image-container {
-  flex: 1 1 300px;    /* minimum 300px a képnek */
-  max-width: 350px;   /* max szélesség */
+  flex: 1 1 300px;
+  max-width: 350px;
   text-align: center;
-}
-
-.fontos-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 footer {
