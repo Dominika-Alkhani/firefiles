@@ -21,8 +21,6 @@ html, body {
   pointer-events: none;    /* ne akadályozza a kattintásokat */
 }
 
-
-
 video {
   width: 100%;
   height: 60vh;
@@ -80,7 +78,7 @@ video {
   transform: translateX(0);
 }
 
-/* ÚJ: Két kép egysorban */
+/* Két kép egysorban */
 .row-images {
   display: flex;
   justify-content: space-between;
@@ -99,6 +97,7 @@ video {
   border-radius: 20px;
 }
 
+/* Görgetésre megjelenő címek */
 .scroll-title {
   text-align: center;
   margin: 40px 0;
@@ -106,15 +105,15 @@ video {
   transform: translateY(50px);
   transition: all 1s ease-out;
   font-family: 'Poppins', sans-serif; /* új betűtípus */
-  font-weight: 600; /* egy kis vastagság */
+  font-weight: 600; /* vastagság */
   font-size: 40px; /* méret */
   color: #fafafa; /* világos fehér */
-  background-color: rgba(255, 255, 255, 0.15); /* áttetsző fehér */
+  background-color: rgba(255, 255, 255, 0.15); /* áttetsző fehér háttér */
   padding: 12px 36px;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* enyhe árnyék */
-  display: inline-block; /* hogy csak a szöveg mögött legyen a háttér */
-  user-select: none; /* kényelmesebb kinézet */
+  display: inline-block; /* csak a szöveg mögött legyen a háttér */
+  user-select: none; /* ne jelölődjön ki véletlenül */
 }
 
 .scroll-title.visible {
@@ -122,6 +121,24 @@ video {
   transform: translateY(0);
 }
 
+/* Üzlet szekció szövege */
+.business-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.business-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .step-image-section {
   width: 100%;
@@ -156,31 +173,6 @@ video {
   margin: 100px auto;
   max-width: 900px;
 }
-
-/* Görgetésre megjelenő címek már nálad szerepelnek, de ide másolom újra */
-.scroll-title {
-  text-align: center;
-  margin: 40px 0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.scroll-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.title-bg {
-  background-color: rgba(128, 128, 128, 0.5);
-  padding: 10px 30px;
-  border-radius: 20px;
-  color: white;
-  font-family: 'Yellowtail', cursive;
-  font-size: 48px;
-}
-
-
 
 footer {
   text-align: center;
@@ -217,8 +209,6 @@ footer {
   background-color: white;
 }
 
-
-
 /* Mobilra külön */
 @media (max-width: 768px) {
   body {
@@ -226,9 +216,26 @@ footer {
     background-position: center center !important;
     background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
   }
-  
-.form-section iframe {
+
+  .form-section iframe {
     max-width: 90vw; /* mobilon majdnem teljes szélesség */
     height: 450px;
+  }
+
+  .scroll-title {
+    font-size: 28px;
+    padding: 10px 20px;
+  }
+
+  .business-text {
+    font-size: 18px;
+  }
+
+  .step-image {
+    width: 90%;
+  }
+
+  .pics1-image {
+    width: 90%;
   }
 }
