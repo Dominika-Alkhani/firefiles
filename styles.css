@@ -105,6 +105,16 @@ video {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
+  font-family: 'Poppins', sans-serif; /* új betűtípus */
+  font-weight: 600; /* egy kis vastagság */
+  font-size: 40px; /* méret */
+  color: #fafafa; /* világos fehér */
+  background-color: rgba(255, 255, 255, 0.15); /* áttetsző fehér */
+  padding: 12px 36px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* enyhe árnyék */
+  display: inline-block; /* hogy csak a szöveg mögött legyen a háttér */
+  user-select: none; /* kényelmesebb kinézet */
 }
 
 .scroll-title.visible {
@@ -112,14 +122,6 @@ video {
   transform: translateY(0);
 }
 
-.title-bg {
-  background-color: rgba(128, 128, 128, 0.5);
-  padding: 10px 30px;
-  border-radius: 20px;
-  color: white;
-  font-family: 'Yellowtail', cursive;
-  font-size: 48px;
-}
 
 .step-image-section {
   width: 100%;
