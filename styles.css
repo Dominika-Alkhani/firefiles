@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: 200%;       /* maradhat, mert jobb mint contain */
+  background-size: 100%;       /* maradhat, mert jobb mint contain */
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
