@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: 100%;       /* maradhat, mert jobb mint contain */
+  background-size: 150%;       /* maradhat, mert jobb mint contain */
   background-position: center;
   background-repeat: no-repeat;
 
@@ -162,7 +162,12 @@ footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
+/* Mobilon inkább scroll, mert fix néha nem jól működik */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .image-section {
     min-height: 100vh;
     background-color: transparent;
@@ -175,10 +180,12 @@ footer {
   }
 }
 
-/* Nagyobb képernyőkön a háttér méretét magassághoz igazítjuk */
+/* Nagyobb képernyőkön (pl. 1600px fölött) maradhat vagy állíthatod finomra */
 @media (min-width: 1600px) {
   body {
-    background-size: auto 100vh;
+    /* Ez opcionális, ha nem tetszik a cover nagy képernyőn */
+    /* background-size: auto 100vh; */
+    background-size: cover;
     background-position: center center;
   }
 }
