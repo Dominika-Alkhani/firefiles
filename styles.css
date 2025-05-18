@@ -149,22 +149,33 @@ video {
   margin: 0 auto;
 }
 
-/* Üzlet szekció */
+/* Üzlet szekció elrendezéséhez */
 .business-section {
-  padding: 40px 5%;
+  margin: 100px auto;
+  max-width: 900px;
+}
+
+/* Görgetésre megjelenő címek már nálad szerepelnek, de ide másolom újra */
+.scroll-title {
   text-align: center;
+  margin: 40px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
 }
 
-.business-section h2 {
-  margin-bottom: 20px;
+.scroll-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.business-text {
-  font-size: 18px;
-  color: #fff;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+.title-bg {
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Yellowtail', cursive;
+  font-size: 48px;
 }
 
 
