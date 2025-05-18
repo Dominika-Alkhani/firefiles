@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-size: cover;       /* maradhat, mert jobb mint contain */
+  background-size: contain;       /* maradhat, mert jobb mint contain */
   background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */ /* Ezt mobilon már kikapcsoltuk, itt akár teljesen eltávolíthatod */
