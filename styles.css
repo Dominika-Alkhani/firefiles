@@ -173,8 +173,8 @@ video {
 }
 
 .fontos-image-container {
-  flex: 1 1 300px;
-  max-width: 350px;
+  flex: 1 1 500px;        /* nagyobb alapméret */
+  max-width: 600px;       /* nagyobb max szélesség */
   text-align: center;
 }
 
@@ -184,7 +184,6 @@ video {
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
 footer {
   text-align: center;
   padding: 10px;
