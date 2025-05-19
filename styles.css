@@ -3,8 +3,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif; /* egységes betűtípus */
   background: transparent; /* ne legyen háttér a body-n */
+  color: #fafafa;
 }
 
 /* Háttér div, fix pozícióban a tartalom mögött */
@@ -62,195 +63,106 @@ video {
   gap: 30px;
   padding: 40px 5%;
   position: relative;
+  max-width: 960px;
+  margin: 0 auto 80px auto;
 }
 
-.pics1-image {
-  width: 900px;         /* nagyobb méret */
-  max-width: 100%;      /* teljes szélesség, ha kisebb képernyő */
-  border-radius: 20px;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 1s ease-out;
-}
-
-.pics1-image.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-/* Két kép egysorban */
-.row-images {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;
-  gap: 20px;
-}
-
-.left-image {
-  width: 55%;
-  border-radius: 20px;
-}
-
-.right-image {
-  width: 60%;
-  border-radius: 20px;
-}
-
-/* Görgetésre megjelenő címek */
-.scroll-title {
-  text-align: center;
-  margin: 40px 0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-  font-family: 'Poppins', sans-serif; /* új betűtípus */
-  font-weight: 600; /* vastagság */
-  font-size: 40px; /* méret */
-  color: #fafafa; /* világos fehér */
-  background-color: rgba(255, 255, 255, 0.15); /* áttetsző fehér háttér */
-  padding: 12px 36px;
+/* Kártya háttérdoboz az utazási képnek */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* enyhe árnyék */
-  display: inline-block; /* csak a szöveg mögött legyen a háttér */
-  user-select: none; /* ne jelölődjön ki véletlenül */
-}
-
-.scroll-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Üzlet szekció szövege */
-.business-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.business-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.step-image-section {
-  width: 100%;
-  margin-bottom: 40px;
-  opacity: 0;
-  transition: all 1s ease-out;
-}
-
-.step-image-section.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.step-image {
-  width: 700px;
-  max-width: 95%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-}
-
-.center-align {
-  text-align: center;
-}
-
-.center-align .step-image {
-  margin: 0 auto;
-}
-
-/* Üzlet szekció elrendezéséhez */
-.business-section {
-  margin: 100px auto;
-  max-width: 900px;
-}
-
-.button-container {
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.button-image {
-  width: 300px;      /* nagyobb alapméret */
-  max-width: 90%;    /* mobilon is szépen méreteződik */
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.info-card {
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px;
-  max-width: 1000px;
-  margin: 0 auto 80px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  transition: all 1s ease-out;
-  transform: translateY(50px);
-  opacity: 0;
+  width: 100%;
+  max-width: 900px;
+  transition: box-shadow 0.3s ease;
 }
 
-.info-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+.card:hover {
+  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
 }
 
+/* Utazási kép */
 .card-image {
-  width: 95%;
+  width: 100%;
   max-width: 900px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card-content {
-  max-width: 500px;
-  color: #fafafa;
-  font-family: 'Poppins', sans-serif;
+/* Column kép lekerekített kerettel */
+.column-image {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
 }
 
-.card-content h3 {
-  font-size: 28px;
-  margin-bottom: 16px;
+.column-image.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.card-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.card-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #4fc3f7; /* világoskék */
+/* Világoskék gomb */
+.btn {
+  background-color: #4a90e2;
   color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 16px;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
+  user-select: none;
 }
 
-.card-button:hover {
-  background-color: #039be5; /* kicsit sötétebb kék */
+.btn:hover {
+  background-color: #357ABD;
+}
+
+/* Üzlet szekció */
+.business-section {
+  margin: 100px auto;
+  max-width: 900px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.business-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Címek, animált megjelenés */
+.scroll-title {
+  font-weight: 600;
+  font-size: 40px;
+  color: #fafafa;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 12px 36px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  user-select: none;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.scroll-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {
@@ -260,45 +172,26 @@ footer {
   background-color: #333;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
+/* Scroll animációhoz */
 .visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
-.form-section {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px; /* hogy ne érjen össze a következő tartalommal */
-}
-
-.form-section iframe {
-  width: 100%;
-  max-width: 400px; /* kisebb szélesség */
-  height: 500px; /* állítható magasság */
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  background-color: white;
-}
-
-/* Mobilra külön */
+/* Mobil */
 @media (max-width: 768px) {
-  body {
-    background-size: 100% !important;        /* kitölti a teljes képernyőt */
-    background-position: center center !important;
-    background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
+  .card {
+    padding: 18px;
   }
 
-  .form-section iframe {
-    max-width: 90vw; /* mobilon majdnem teljes szélesség */
-    height: 450px;
+  .btn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+  .card-image,
+  .column-image {
+    max-width: 90%;
   }
 
   .scroll-title {
@@ -306,30 +199,7 @@ footer {
     padding: 10px 20px;
   }
 
-  .business-text {
-    font-size: 18px;
-  }
-
-  .step-image {
-    width: 90%;
-  }
-
-  .pics1-image {
-    width: 90%;
-  }
-}
-
-.info-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .card-image {
-    width: 100%;
-  }
-
-  .card-content {
-    max-width: 90%;
+  .business-section {
+    margin: 60px auto;
   }
 }
