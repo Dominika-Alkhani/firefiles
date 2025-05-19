@@ -215,8 +215,8 @@ video {
 }
 
 .card-image {
-  width: 55%;
-  max-width: 500px;
+  width: 65%;                 /* Növelt méret */
+  max-width: 600px;           /* Nagyobb maximum méret */
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
@@ -326,7 +326,7 @@ footer {
   }
 
   .card-image {
-    width: 90%;
+    width: 100%;
   }
 
   .card-content {
