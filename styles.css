@@ -64,27 +64,9 @@ video {
   position: relative;
 }
 
-/* --- Kép háttérdoboz és méret --- */
-.pics1-image,
-.column-image {
-  background: rgba(255, 255, 255, 0.12);      /* áttetsző fehér */
-  backdrop-filter: blur(12px);                 /* üveghatás */
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 25px;
-  padding: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: box-shadow 0.3s ease;
-  max-width: 100%;
-}
-
-.pics1-image:hover,
-.column-image:hover {
-  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
-}
-
-/* Kép méret nagyítása */
 .pics1-image {
-  width: 950px;
+  width: 900px;         /* nagyobb méret */
+  max-width: 100%;      /* teljes szélesség, ha kisebb képernyő */
   border-radius: 20px;
   opacity: 0;
   transform: translateX(-100px);
@@ -96,18 +78,6 @@ video {
   transform: translateX(0);
 }
 
-.column-image {
-  width: 900px;
-  border-radius: 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.column-image.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Két kép egysorban */
 .row-images {
@@ -135,16 +105,16 @@ video {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  color: #fafafa;
-  background-color: rgba(255, 255, 255, 0.15);
+  font-family: 'Poppins', sans-serif; /* új betűtípus */
+  font-weight: 600; /* vastagság */
+  font-size: 40px; /* méret */
+  color: #fafafa; /* világos fehér */
+  background-color: rgba(255, 255, 255, 0.15); /* áttetsző fehér háttér */
   padding: 12px 36px;
   border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  display: inline-block;
-  user-select: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* enyhe árnyék */
+  display: inline-block; /* csak a szöveg mögött legyen a háttér */
+  user-select: none; /* ne jelölődjön ki véletlenül */
 }
 
 .scroll-title.visible {
@@ -211,13 +181,11 @@ video {
   margin-top: 30px;
 }
 
-/* Világoskék gomb */
 .button-image {
-  width: 300px;
-  max-width: 90%;
+  width: 300px;      /* nagyobb alapméret */
+  max-width: 90%;    /* mobilon is szépen méreteződik */
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  filter: brightness(1.1) saturate(1.2);
 }
 
 .button-image:hover {
@@ -349,8 +317,9 @@ footer {
   .pics1-image {
     width: 90%;
   }
+}
 
-  .info-card {
+.info-card {
     flex-direction: column;
     text-align: center;
     padding: 20px;
