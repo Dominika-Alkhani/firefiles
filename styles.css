@@ -78,6 +78,23 @@ video {
   transform: translateX(0);
 }
 
+/* column.jpg kép stílusa */
+.column-image {
+  width: 700px;
+  max-width: 90%;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.column-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Két kép egysorban */
 .row-images {
   display: flex;
