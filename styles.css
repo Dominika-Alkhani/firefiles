@@ -80,8 +80,8 @@ video {
 
 /* column.jpg kép stílusa */
 .column-image {
-  width: 700px;
-  max-width: 90%;
+  width: 900px;
+  max-width: 100%;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
