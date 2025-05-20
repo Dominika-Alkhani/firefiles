@@ -169,29 +169,6 @@ video {
   margin: 0 auto;
 }
 
-/* Üzlet szekció elrendezéséhez */
-.business-section {
-  margin: 100px auto;
-  max-width: 900px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.button-image {
-  width: 300px;      /* nagyobb alapméret */
-  max-width: 90%;    /* mobilon is szépen méreteződik */
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
 
 .info-card {
   display: flex;
