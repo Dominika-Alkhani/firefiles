@@ -81,30 +81,24 @@ video {
 .image-overlay-container {
   position: relative;
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
 }
 
-.image-overlay-container img {
+.pics1-image {
   width: 100%;
   display: block;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Alap overlay szövegstílus */
 .overlay-text {
   position: absolute;
   color: white;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  background-color: rgba(0, 0, 0, 0.5); /* háttér a szöveg mögött */
-  padding: 8px 12px;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
   border-radius: 10px;
-  max-width: 90%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Elhelyezés */
 .top-left {
   top: 10px;
   left: 10px;
@@ -114,8 +108,6 @@ video {
   bottom: 10px;
   right: 10px;
 }
-
-
 /* Két kép egysorban */
 .row-images {
   display: flex;
