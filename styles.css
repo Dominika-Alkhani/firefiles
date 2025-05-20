@@ -4,10 +4,9 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background: transparent; /* ne legyen háttér a body-n */
+  background: transparent;
 }
 
-/* Háttér div, fix pozícióban a tartalom mögött */
 #background-div {
   position: fixed;
   top: 0; left: 0;
@@ -16,9 +15,9 @@ html, body {
   background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 200%;   /* nagyítás, hogy éles legyen */
-  z-index: -1;             /* tartalom mögé */
-  pointer-events: none;    /* ne akadályozza a kattintásokat */
+  background-size: 200%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 video {
@@ -64,12 +63,14 @@ video {
   position: relative;
 }
 
+/* ✅ Módosítva a pics1.png-re vonatkozó rész */
 .pics1-image {
-  width: 900px;         /* nagyobb méret */
-  max-width: 100%;      /* teljes szélesség, ha kisebb képernyő */
+  width: 100%;
+  max-width: 950px;
   border-radius: 20px;
-  opacity: 0;
-  transform: translateX(-100px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transform: translateX(0);
   transition: all 1s ease-out;
 }
 
@@ -108,7 +109,7 @@ video {
   bottom: 10px;
   right: 10px;
 }
-/* Két kép egysorban */
+
 .row-images {
   display: flex;
   justify-content: space-between;
@@ -127,23 +128,22 @@ video {
   border-radius: 20px;
 }
 
-/* Görgetésre megjelenő címek */
 .scroll-title {
   text-align: center;
   margin: 40px 0;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
-  font-family: 'Poppins', sans-serif; /* új betűtípus */
-  font-weight: 600; /* vastagság */
-  font-size: 40px; /* méret */
-  color: #fafafa; /* világos fehér */
-  background-color: rgba(255, 255, 255, 0.15); /* áttetsző fehér háttér */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #fafafa;
+  background-color: rgba(255, 255, 255, 0.15);
   padding: 12px 36px;
   border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* enyhe árnyék */
-  display: inline-block; /* csak a szöveg mögött legyen a háttér */
-  user-select: none; /* ne jelölődjön ki véletlenül */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  user-select: none;
 }
 
 .scroll-title.visible {
@@ -151,7 +151,6 @@ video {
   transform: translateY(0);
 }
 
-/* Üzlet szekció szövege */
 .business-text {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
@@ -170,10 +169,12 @@ video {
   transform: translateY(0);
 }
 
+/* ✅ Módosítva a colum.png-re vonatkozó rész */
 .step-image-section {
   width: 100%;
   margin-bottom: 40px;
-  opacity: 0;
+  opacity: 1;
+  transform: translateX(0);
   transition: all 1s ease-out;
 }
 
@@ -183,11 +184,12 @@ video {
 }
 
 .step-image {
-  width: 700px;
-  max-width: 95%;
+  width: 800px;
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .center-align {
@@ -197,7 +199,6 @@ video {
 .center-align .step-image {
   margin: 0 auto;
 }
-
 
 .info-card {
   display: flex;
@@ -247,7 +248,7 @@ video {
 .card-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #4fc3f7; /* világoskék */
+  background-color: #4fc3f7;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -256,7 +257,7 @@ video {
 }
 
 .card-button:hover {
-  background-color: #039be5; /* kicsit sötétebb kék */
+  background-color: #039be5;
 }
 
 footer {
@@ -281,29 +282,28 @@ footer {
   padding: 20px;
   display: flex;
   justify-content: center;
-  margin-bottom: 40px; /* hogy ne érjen össze a következő tartalommal */
+  margin-bottom: 40px;
 }
 
 .form-section iframe {
   width: 100%;
-  max-width: 400px; /* kisebb szélesség */
-  height: 500px; /* állítható magasság */
+  max-width: 400px;
+  height: 500px;
   border: none;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   background-color: white;
 }
 
-/* Mobilra külön */
 @media (max-width: 768px) {
   body {
-    background-size: 100% !important;        /* kitölti a teljes képernyőt */
+    background-size: 100% !important;
     background-position: center center !important;
-    background-attachment: fixed !important; /* fix helyett scroll, hogy működjön mobilon */
+    background-attachment: fixed !important;
   }
 
   .form-section iframe {
-    max-width: 90vw; /* mobilon majdnem teljes szélesség */
+    max-width: 90vw;
     height: 450px;
   }
 
@@ -326,16 +326,15 @@ footer {
 }
 
 .info-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
 
-  .card-image {
-    width: 100%;
-  }
+.card-image {
+  width: 100%;
+}
 
-  .card-content {
-    max-width: 90%;
-  }
+.card-content {
+  max-width: 90%;
 }
