@@ -28,9 +28,10 @@
     <div class="overlay-text bottom-right">Garantált kedvezmények</div>
   </div>
 
+  <!-- Itt a card-section megtartva hidden osztállyal -->
   <section class="card-section hidden">
     <div class="info-card">
-      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/column.jpg" alt="Utazási ajánlat" class="card-image">
+      <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/column.jpg" alt="Utazási ajánlat" class="card-image" />
       <div class="card-content">
         <h3>Fedezd fel a világot másként</h3>
         <p>Utazz stílusosan és kedvezményesen! Exkluzív ajánlataink Neked szólnak világszerte.</p>
@@ -45,31 +46,25 @@
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it" class="right-image" />
   </div>
 
-  <!-- Hogyan tudsz hozzánk csatlakozni -->
   <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
 
-  <!-- Step 1 -->
   <section class="step-image-section hidden center-align" id="step1">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
   </section>
 
-  <!-- Step 2 -->
   <section class="step-image-section hidden center-align" id="step2">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
   </section>
 
-  <!-- Step 3 -->
   <section class="step-image-section hidden center-align" id="step3">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
   </section>
 
-  <!-- Tally űrlap -->
   <section class="form-section hidden center-align">
     <iframe data-tally-src="https://tally.so/embed/mZyJOy?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
       loading="lazy" width="100%" height="574" frameborder="0" marginheight="0" marginwidth="0" title="Regisztráció"></iframe>
   </section>
 
-  <!-- Üzlet szekció -->
   <section id="business" class="business-section center-align">
     <p class="business-text scroll-title hidden">Szeretnél többet megtudni az üzleti lehetőségekről is?</p>
   </section>
@@ -88,6 +83,8 @@
         }
       });
     });
+    // Induláskor is ellenőrzi
+    window.dispatchEvent(new Event('scroll'));
   </script>
 
   <script>
