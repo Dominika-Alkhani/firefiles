@@ -169,68 +169,7 @@ video {
   transform: translateY(0);
 }
 
-/* ✅ Módosítva a column.jpg-re vonatkozó rész */
-/* Kezdetben rejtve, scrollra látható lesz */
-.info-card {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto 80px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
 
-.info-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card-image {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.card-content {
-  max-width: 90%;
-  color: #fafafa;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 20px;
-}
-
-.card-content h3 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-.card-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.card-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #4fc3f7;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-  background-color: #039be5;
-}
 
 footer {
   text-align: center;
