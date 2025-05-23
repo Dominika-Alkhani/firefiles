@@ -110,6 +110,22 @@ video {
   right: 10px;
 }
 
+.image-row-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* távolság a képek között */
+  margin: 40px auto;
+  flex-wrap: wrap; /* mobilon egymás alá kerülhet */
+}
+
+.side-by-side-image {
+  max-width: 45%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .rounded-scroll-image {
   width: 100%;
   max-width: 700px;  /* nagyobb méret */
