@@ -110,6 +110,24 @@ video {
   right: 10px;
 }
 
+.rounded-scroll-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  margin: 40px auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Görgetéskor jelenik meg */
+.visible .rounded-scroll-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .row-images {
   display: flex;
   justify-content: space-between;
