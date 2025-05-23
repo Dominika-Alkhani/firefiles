@@ -156,8 +156,8 @@ video {
   margin: 40px auto;
 }
 
-.pics2-image {
-  width: 150px; /* sokkal kisebb */
+.pics3-image {
+  width: 250px; /* sokkal kisebb */
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -167,7 +167,7 @@ video {
 }
 
 /* Görgetéskor megjelenik */
-.visible .pics2-image {
+.visible .pics3-image {
   opacity: 1;
   transform: translateY(0);
 }
