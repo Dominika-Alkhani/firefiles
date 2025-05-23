@@ -157,7 +157,7 @@ video {
 }
 
 .pics3-image {
-  width: 250px; /* sokkal kisebb */
+  width: 50px; /* sokkal kisebb */
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
