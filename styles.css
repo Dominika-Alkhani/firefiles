@@ -162,23 +162,6 @@ video {
   transform: translateY(0);
 }
 
-.row-images {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;
-  gap: 20px;
-}
-
-.left-image {
-  width: 55%;
-  border-radius: 20px;
-}
-
-.right-image {
-  width: 60%;
-  border-radius: 20px;
-}
 
 .scroll-title {
   text-align: center;
