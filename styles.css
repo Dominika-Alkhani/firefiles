@@ -112,7 +112,7 @@ video {
 
 .rounded-scroll-image {
   width: 100%;
-  max-width: 800px;  /* nagyobb méret */
+  max-width: 700px;  /* nagyobb méret */
   border-radius: 20px;
   margin: 40px 0 40px auto;
   display: block;
