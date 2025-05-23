@@ -119,13 +119,13 @@ video {
 }
 
 .image-large {
-  width: 60%;          /* nagyobb kép */
+  width: 100%;          /* nagyobb kép */
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .image-small {
-  width: 25%;          /* kisebb kép */
+  width: 10%;          /* kisebb kép */
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
