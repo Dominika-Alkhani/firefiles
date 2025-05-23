@@ -14,11 +14,8 @@
     A böngésződ nem támogatja a videólejátszást.
   </video>
 
-  <!-- ✅ MODERN NAVIGÁCIÓ HTML -->
   <nav class="navbar">
-    <div class="brand">Fireflies</div>
-    <div class="nav-toggle" id="navToggle">&#9776;</div>
-    <ul class="nav-menu" id="navMenu">
+    <ul>
       <li><a href="#home">Főoldal</a></li>
       <li><a href="#business">Regisztráció</a></li>
       <li><a href="#contact">Kapcsolat</a></li>
@@ -31,6 +28,8 @@
     <div class="overlay-text bottom-right">Garantált kedvezmények</div>
   </div>
 
+
+  <!-- Egysorban két kép -->
   <div class="row-images hidden">
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics2(2).png" alt="Bal kép" class="left-image" />
     <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it" class="right-image" />
@@ -73,16 +72,8 @@
         }
       });
     });
+    // Induláskor is ellenőrzi
     window.dispatchEvent(new Event('scroll'));
-  </script>
-
-  <!-- ✅ Hamburger menü működése -->
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('navMenu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
   </script>
 
   <script>
@@ -102,6 +93,6 @@
       s.onerror = v;
       d.body.appendChild(s);
     }
-  </script>
+  </script> 
 </body>
 </html>
