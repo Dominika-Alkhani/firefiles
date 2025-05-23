@@ -139,28 +139,39 @@ video {
   align-self: flex-end;
   margin-left: auto;
 }
-.rounded-scroll-image {
-  width: 100%;
-  max-width: 700px;  /* nagyobb méret */
-  border-radius: 20px;
-  margin: 40px 0 40px auto;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-  transform: translateY(40px);
-}
+
 
 .right-align {
   text-align: right;
   padding: 0 40px;
 }
 
-/* Görgetéskor jelenik meg */
-.visible .rounded-scroll-image {
+.side-by-side-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 40px auto;
+}
+
+.pics2-image {
+  width: 150px; /* sokkal kisebb */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+/* Görgetéskor megjelenik */
+.visible .pics2-image {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 .scroll-title {
