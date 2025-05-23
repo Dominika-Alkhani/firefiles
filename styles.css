@@ -1,236 +1,98 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: transparent;
-}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utazási Weboldal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="background-div"></div>
+  <video autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4" />
+    A böngésződ nem támogatja a videólejátszást.
+  </video>
 
-#background-div {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/background.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 200%;
-  z-index: -1;
-  pointer-events: none;
-}
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Főoldal</a></li>
+      <li><a href="#business">Regisztráció</a></li>
+      <li><a href="#contact">Kapcsolat</a></li>
+    </ul>
+  </nav>
 
-video {
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
-  display: block;
-}
-
-.navbar {
-  margin: 20px auto;
-  width: fit-content;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 16px;
-  font-size: 18px;
-  border-radius: 10px;
-  background-color: rgba(100, 100, 100, 0.4);
-  transition: background-color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  background-color: rgba(160, 160, 160, 0.8);
-}
-
-.image-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 40px 5%;
-  position: relative;
-}
-
-/* ✅ Módosítva a pics1.png-re vonatkozó rész */
-.pics1-image {
-  width: 100%;
-  max-width: 950px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 1s ease-out;
-}
-
-.pics1-image.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.image-overlay-container {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 800px;
-}
-
-.pics1-image {
-  width: 100%;
-  display: block;
-}
-
-.overlay-text {
-  position: absolute;
-  color: white;
-  font-size: 1.2rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-}
-
-.top-left {
-  top: 10px;
-  left: 10px;
-}
-
-.bottom-right {
-  bottom: 10px;
-  right: 10px;
-}
-
-.row-images {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;
-  gap: 20px;
-}
-
-.left-image {
-  width: 55%;
-  border-radius: 20px;
-}
-
-.right-image {
-  width: 60%;
-  border-radius: 20px;
-}
-
-.scroll-title {
-  text-align: center;
-  margin: 40px 0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  color: #fafafa;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 12px 36px;
-  border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  display: inline-block;
-  user-select: none;
-}
-
-.scroll-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.business-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.business-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+  <div class="image-overlay-container">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics1.png" alt="Utazás kép" class="pics1-image" />
+    <div class="overlay-text top-left">Több mint 5,1 millió szálláshely</div>
+    <div class="overlay-text bottom-right">Garantált kedvezmények</div>
+  </div>
 
 
+  <!-- Egysorban két kép -->
+  <div class="row-images hidden">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/pics2(2).png" alt="Bal kép" class="left-image" />
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/postit.png" alt="Post-it" class="right-image" />
+  </div>
 
-footer {
-  text-align: center;
-  padding: 10px;
-  color: white;
-  background-color: #333;
-}
+  <h2 class="scroll-title hidden">Hogyan tudsz hozzánk csatlakozni?</h2>
 
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
+  <section class="step-image-section hidden center-align" id="step1">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step1.png" alt="Step 1" class="step-image" />
+  </section>
 
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+  <section class="step-image-section hidden center-align" id="step2">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step2.png" alt="Step 2" class="step-image" />
+  </section>
 
-.form-section {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
+  <section class="step-image-section hidden center-align" id="step3">
+    <img src="https://raw.githubusercontent.com/Dominika-Alkhani/firefiles/main/step3.png" alt="Step 3" class="step-image" />
+  </section>
 
-.form-section iframe {
-  width: 100%;
-  max-width: 400px;
-  height: 500px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  background-color: white;
-}
+  <section class="form-section hidden center-align">
+    <iframe data-tally-src="https://tally.so/embed/mZyJOy?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy" width="100%" height="574" frameborder="0" marginheight="0" marginwidth="0" title="Regisztráció"></iframe>
+  </section>
 
-@media (max-width: 768px) {
-  body {
-    background-size: 100% !important;
-    background-position: center center !important;
-    background-attachment: fixed !important;
-  }
+  <section id="business" class="business-section center-align">
+    <p class="business-text scroll-title hidden">Szeretnél többet megtudni az üzleti lehetőségekről is?</p>
+  </section>
 
-  .form-section iframe {
-    max-width: 90vw;
-    height: 450px;
-  }
+  <footer>
+    <p>&copy; 2025 Utazási Weboldal</p>
+  </footer>
 
-  .scroll-title {
-    font-size: 28px;
-    padding: 10px 20px;
-  }
+  <script>
+    const sections = document.querySelectorAll('.hidden');
+    window.addEventListener('scroll', () => {
+      const triggerPoint = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
+        }
+      });
+    });
+    // Induláskor is ellenőrzi
+    window.dispatchEvent(new Event('scroll'));
+  </script>
 
-  .business-text {
-    font-size: 18px;
-  }
-
-  .step-image {
-    width: 90%;
-  }
-
-  .pics1-image {
-    width: 90%;
-  }
-}
+  <script>
+    var d = document,
+      w = "https://tally.so/widgets/embed.js",
+      v = function () {
+        "undefined" != typeof Tally
+          ? Tally.loadEmbeds()
+          : d.querySelectorAll("iframe[data-tally-src]:not([src])")
+            .forEach(function (e) { e.src = e.dataset.tallySrc });
+      };
+    if ("undefined" != typeof Tally) v();
+    else if (d.querySelector('script[src="' + w + '"]') == null) {
+      var s = d.createElement("script");
+      s.src = w;
+      s.onload = v;
+      s.onerror = v;
+      d.body.appendChild(s);
+    }
+  </script> 
+</body>
+</html>
