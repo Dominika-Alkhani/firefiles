@@ -205,6 +205,9 @@ video {
   width: 100%;
   height: 100vh; /* teljes képernyős */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Videó háttér */
@@ -212,13 +215,14 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: 1;
   opacity: 0.85;
-  filter: blur(2px) brightness(0.9); /* Lágyabb, sötétebb hatás */
+  filter: brightness(0.9);
   border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); /* Lágy keret, nem blur */
 }
 
 /* Tartalom a videó fölött */
@@ -226,16 +230,15 @@ video {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: row;  /* egymás MELLÉ kerül a kép és a gomb */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  height: 100%;
-  text-align: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05); /* kis áttetsző háttér */
-  backdrop-filter: blur(5px); /* üvegszerű hatás */
+  padding: 30px 40px;
+  background: rgba(0, 0, 0, 0.4); /* sötétebb áttetsző háttér a kontraszthoz */
   border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px); /* enyhe üveghatás */
 }
 
 /* Kép stílus */
@@ -248,7 +251,7 @@ video {
 /* Gomb stílus */
 .reveal-button {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 16px 32px;
   font-size: 18px;
   color: white;
   background-color: #1e3a8a;
@@ -257,6 +260,7 @@ video {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
   white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .reveal-button:hover {
@@ -268,9 +272,16 @@ video {
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
+    gap: 20px;
+    padding: 20px;
   }
+
   .reveal-image {
     width: 90%;
+  }
+
+  .reveal-button {
+    width: auto;
   }
 }
 footer {
