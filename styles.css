@@ -203,8 +203,11 @@ video {
   position: relative;
   max-width: 900px;
   margin: 60px auto;
-  padding-bottom: 150px; /* hely a hullámnak alul */
-  overflow: visible;
+  padding: 40px 20px;   /* belső margó fent és oldalt, hogy ne érjen a tartalom széléhez */
+  overflow: hidden;    /* hogy a hullám ne lógjon ki */
+  border-radius: 20px;
+  background: linear-gradient(135deg, #3b82f6 40%, #60a5fa 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .content {
@@ -233,6 +236,7 @@ video {
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .reveal-button:hover {
@@ -240,16 +244,16 @@ video {
   transform: scale(1.05);
 }
 
-/* Hullám konténer - alulra pozicionálva */
+/* Hullám konténer - a teljes szakasz mögött, abszolút pozícionálva */
 .wave-bottom {
   position: absolute;
-  bottom: 0;
+  top: 0;          /* nem csak alul, hanem teljesen fentről */
   left: 0;
   width: 100%;
-  height: 150px; /* állítsd igény szerint a hullám magasságát */
+  height: 100%;    /* kitölti a teljes szakasz magasságát */
   z-index: 1;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .wave-bottom svg {
