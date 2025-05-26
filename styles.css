@@ -197,6 +197,70 @@ video {
   transform: translateY(0);
 }
 
+/* --- Hullámos háttér és csatlakozás gomb blokk --- */
+
+.wave-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #3b82f6 40%, #60a5fa 100%);
+  background-size: 400% 400%;
+  animation: waveBackground 10s ease infinite;
+  text-align: center;
+  border-radius: 30px;
+  margin: 60px auto;
+}
+
+@keyframes waveBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.image-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.image-button-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Gomb stílus */
+.reveal-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  color: white;
+  background-color: #1e3a8a;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reveal-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
 footer {
   text-align: center;
   padding: 10px;
