@@ -243,11 +243,11 @@ video {
 
 /* Kép stílus */
 .reveal-image {
-  width: 300px;
+  width: 500px; /* vagy akár 600px */
+  max-width: 90%;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-
 /* Gomb stílus */
 .reveal-button {
   display: inline-block;
