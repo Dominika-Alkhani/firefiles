@@ -199,11 +199,10 @@ video {
 
 /* --- Hullámos háttér és csatlakozás gomb blokk --- */
 
-/* Szülő szekció, amely tartalmazza a videót és a tartalmat */
 .ocean-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* teljes képernyős */
+  height: 100vh; /* teljes képernyős magasság */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -217,12 +216,12 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* teljes háttér, kitölti a szülőt */
   z-index: 1;
   opacity: 0.85;
   filter: brightness(0.9);
   border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); /* Lágy keret, nem blur */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 /* Tartalom a videó fölött */
@@ -230,24 +229,27 @@ video {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* kép és gomb egymás mellett */
   align-items: center;
   justify-content: center;
   gap: 40px;
   padding: 30px 40px;
-  background: rgba(0, 0, 0, 0.4); /* sötétebb áttetsző háttér a kontraszthoz */
+  background: rgba(0, 0, 0, 0.4); /* sötétebb áttetsző háttér */
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px); /* enyhe üveghatás */
+  backdrop-filter: blur(6px);
 }
 
-/* Kép stílus */
+/* Kép stílus - arány megtartás, ne vágjon le semmit */
 .reveal-image {
-  width: 700px; /* vagy akár 600px */
-  max-width: 90%;
+  width: auto;          /* ne legyen fix szélesség */
+  max-width: 600px;     /* max szélesség */
+  max-height: 80vh;     /* max magasság, hogy ne nyúljon túl */
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  object-fit: contain;  /* megtartja az arányokat, nem vág le */
 }
+
 /* Gomb stílus */
 .reveal-button {
   display: inline-block;
@@ -277,7 +279,8 @@ video {
   }
 
   .reveal-image {
-    width: 90%;
+    max-width: 90%;
+    max-height: none; /* mobilon engedjük magasabbra */
   }
 
   .reveal-button {
