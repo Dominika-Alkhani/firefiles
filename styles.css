@@ -199,27 +199,8 @@ video {
 
 /* --- Hullámos háttér és csatlakozás gomb blokk --- */
 
-.wave-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #3b82f6 40%, #60a5fa 100%);
-  background-size: 400% 400%;
-  animation: waveBackground 10s ease infinite;
-  text-align: center;
-  border-radius: 30px;
-  margin: 60px auto;
-}
-
-@keyframes waveBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .image-button-container {
+  position: relative; /* hogy a hullám mögé lehessen tenni */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,6 +218,8 @@ video {
 }
 
 .reveal-image {
+  position: relative;  /* fölé kerül a hullámnak */
+  z-index: 2;
   width: 100%;
   max-width: 600px;
   border-radius: 20px;
@@ -261,11 +244,16 @@ video {
   transform: scale(1.05);
 }
 
+/* Hullám SVG a kép mögött */
 .wave-bottom svg {
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100px;
-  margin-top: -5px; /* hogy ne legyen rés */
+  height: 150px; /* állítsd igény szerint */
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.7; /* opcionális áttetszőség */
 }
 
 footer {
