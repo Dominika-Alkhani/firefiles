@@ -242,12 +242,12 @@ video {
 
 /* Kép stílus - arány megtartás, ne vágjon le semmit */
 .reveal-image {
-  width: auto;          /* ne legyen fix szélesség */
-  max-width: 600px;     /* max szélesség */
-  max-height: 80vh;     /* max magasság, hogy ne nyúljon túl */
+  width: auto;
+  max-width: 80vw;     /* növeljük a max szélességet a képernyőhöz viszonyítva */
+  max-height: 90vh;    /* engedjük magasabbra is, de ne lógjon ki a képernyőről */
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  object-fit: contain;  /* megtartja az arányokat, nem vág le */
+  object-fit: contain;
 }
 
 /* Gomb stílus */
