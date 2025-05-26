@@ -199,35 +199,32 @@ video {
 
 /* --- Hullámos háttér és csatlakozás gomb blokk --- */
 
+.wave-section {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 20px 100px; /* alsó padding, hogy a hullám ne lógjon ki */
+}
+
 .image-button-container {
-  position: relative; /* hogy a hullám mögé lehessen tenni */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  max-width: 900px;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-  overflow: visible; /* hogy a hullám kilógását ne vágja le */
-}
-
-.image-button-container.visible {
-  opacity: 1;
-  transform: translateY(0);
+  z-index: 10; /* biztosan a hullám fölött legyen */
 }
 
 .reveal-image {
-  position: relative;  /* fölé kerül a hullámnak */
-  z-index: 2;
+  position: relative;
   width: 100%;
   max-width: 600px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
-/* Gomb stílus */
 .reveal-button {
   display: inline-block;
   padding: 14px 28px;
@@ -238,8 +235,7 @@ video {
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  position: relative; /* hogy ne takarja le semmi */
-  z-index: 3;
+  z-index: 10;
 }
 
 .reveal-button:hover {
@@ -249,16 +245,21 @@ video {
 
 /* Hullám SVG a kép mögött */
 .wave-bottom {
-  position: absolute; /* kép konténeréhez viszonyítva */
-  bottom: -20px;      /* igazítsd igény szerint */
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 150px;      /* igény szerint módosítható */
-  z-index: 1;         /* kisebb index, hogy mögötte legyen a kép */
+  height: 150px; /* állítsd igény szerint */
+  z-index: 1;
   pointer-events: none;
-  opacity: 0.7;       /* áttetszőség */
+  opacity: 0.9;
 }
 
+.wave-bottom svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 footer {
   text-align: center;
   padding: 10px;
