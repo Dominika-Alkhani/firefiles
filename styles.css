@@ -119,7 +119,8 @@ video {
 .ocean-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* teljes képernyős magasság */
+  height: auto;
+  padding: 60px 0;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -133,7 +134,7 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* teljes háttér, kitölti a szülőt */
+  object-fit: cover;
   z-index: 1;
   opacity: 0.85;
   filter: brightness(0.7) blur(2px);
@@ -165,7 +166,7 @@ video {
   bottom: 0;
 }
 
-/* Tartalom (kisebb szövegdoboz) */
+/* Tartalom (kép helyett szöveges blokkokkal) */
 .content {
   position: relative;
   z-index: 10;
@@ -173,28 +174,28 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding: 20px 30px;
+  gap: 40px;
+  padding: 30px 40px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
   color: white;
   text-align: center;
-  max-width: 700px;
+  max-width: 1000px;
   margin: auto;
 }
 
 /* Cím stílus */
 .content h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 /* Rácsos elrendezés */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
 }
@@ -210,7 +211,7 @@ video {
   transition: all 0.4s ease;
 }
 
-/* Görgetésre megjelenő animáció a .hidden/.visible alapján */
+/* Görgetésre megjelenő animáció */
 .hidden {
   opacity: 0;
   transform: translateY(20px);
@@ -243,10 +244,16 @@ video {
 }
 
 /* Mobilbarát megjelenés */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .content {
-    padding: 15px 20px;
     max-width: 90vw;
+    padding: 20px;
   }
 
   .grid-container {
@@ -258,14 +265,13 @@ video {
   }
 
   .content h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .reveal-button {
     width: auto;
   }
 }
-
 footer {
   text-align: center;
   padding: 10px;
