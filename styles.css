@@ -291,7 +291,7 @@ video {
 
 .step-image-section {
   margin: 40px auto;
-  max-width: 400px;   /* fix szélesség a képek szülőjének */
+  max-width: 800px; /* NAGYOBB KERET A KÉPNEK */
   padding: 20px;
   display: flex;
   align-items: center;
