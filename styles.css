@@ -148,7 +148,7 @@ video {
   height: 150px;
   left: 0;
   z-index: 5;
-  pointer-events: none; /* ne zavarja a kattintást */
+  pointer-events: none;
 }
 
 .wave svg {
@@ -165,7 +165,7 @@ video {
   bottom: 0;
 }
 
-/* Tartalom (kép helyett szöveges blokkokkal) */
+/* Tartalom (kisebb szövegdoboz) */
 .content {
   position: relative;
   z-index: 10;
@@ -173,21 +173,21 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 40px;
+  gap: 30px;
+  padding: 20px 30px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
   color: white;
   text-align: center;
-  max-width: 1200px;
+  max-width: 700px;
   margin: auto;
 }
 
 /* Cím stílus */
 .content h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
@@ -245,7 +245,8 @@ video {
 /* Mobilbarát megjelenés */
 @media (max-width: 768px) {
   .content {
-    padding: 20px;
+    padding: 15px 20px;
+    max-width: 90vw;
   }
 
   .grid-container {
@@ -257,14 +258,13 @@ video {
   }
 
   .content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .reveal-button {
     width: auto;
   }
 }
-
 
 footer {
   text-align: center;
