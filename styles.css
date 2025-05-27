@@ -270,14 +270,14 @@ video {
   transition: all 0.4s ease;
 }
 
-/* Görgetésre megjelenő animáció */
-.reveal-text {
+/* Görgetésre megjelenő animáció a .hidden/.visible alapján */
+.hidden {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.reveal-text.active {
+.visible {
   opacity: 1;
   transform: translateY(0);
 }
