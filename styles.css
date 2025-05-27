@@ -63,136 +63,40 @@ video {
   position: relative;
 }
 
-/* ✅ Módosítva a pics1.png-re vonatkozó rész */
-.pics1-image {
-  width: 100%;
-  max-width: 950px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 1s ease-out;
-}
-
-.pics1-image.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.image-overlay-container {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 800px;
-}
-
-.pics1-image {
-  width: 100%;
-  display: block;
-}
-
-.overlay-text {
-  position: absolute;
+/* Szöveges szekció képek helyett */
+.why-choose-us {
+  background-image: url('https://raw.githubusercontent.com/Dominika-Alkhani/fireflies/refs/heads/main/new.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
   color: white;
-  font-size: 1.2rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-}
-
-.top-left {
-  top: 10px;
-  left: 10px;
-}
-
-.bottom-right {
-  bottom: 10px;
-  right: 10px;
-}
-
-.custom-image-row {
+  text-align: center;
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+}
+
+/* Szövegdoboz stílus */
+.why-content {
+  background: rgba(0, 0, 0, 0.6);
   padding: 40px;
-  flex-wrap: wrap;
-}
-
-.image-large {
-  width: 100%;          /* nagyobb kép */
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.image-small {
-  width: 10%;          /* kisebb kép */
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Igazítás */
-.left-image {
-  align-self: flex-start;
-}
-
-.right-image {
-  align-self: flex-end;
-  margin-left: auto;
-}
-
-
-.right-align {
-  text-align: right;
-  padding: 0 40px;
-}
-
-.side-by-side-images {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 100%;
-  margin: 40px auto;
-}
-
-.pics3-image {
-  width: 500px; /* sokkal kisebb */
-  height: auto;
-  border-radius: 15px;
-  box-shadow: none;
+/* Görgetésre megjelenő animáció */
+.hidden {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-/* Görgetéskor megjelenik */
-.visible .pics3-image {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
-.scroll-title {
-  text-align: center;
-  margin: 40px 0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  color: #fafafa;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 12px 36px;
-  border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  display: inline-block;
-  user-select: none;
-}
-
-.scroll-title.visible {
+.visible {
   opacity: 1;
   transform: translateY(0);
 }
