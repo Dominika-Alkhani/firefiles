@@ -296,11 +296,13 @@ video {
 }
 
 .step-image {
-  max-width: 300px; /* kisebb méret */
+  max-width: 400px;
   width: 100%;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
 }
 
 /* Igazítások */
