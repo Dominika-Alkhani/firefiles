@@ -310,7 +310,7 @@ video {
 }
 
 .step-image {
-  max-width: 350px;  /* nagyobb kép */
+  max-width: 600px;  /* nagyobb kép */
   width: 100%;
   height: auto;
   border-radius: 16px;
