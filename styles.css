@@ -291,43 +291,43 @@ video {
 
 .step-image-section {
   margin: 40px auto;
-  max-width: 100%;
+  max-width: 33%; /* hogy 3 kép egymás mellett férjen el */
   padding: 20px;
+  display: flex;           /* flexbox a belső igazításhoz */
+  align-items: center;
+}
+
+/* Külön igazítások a képek szekcióinak */
+#step1 {
+  justify-content: flex-start; /* balra */
+}
+
+#step2 {
+  justify-content: center;     /* középre */
+}
+
+#step3 {
+  justify-content: flex-end;   /* jobbra */
 }
 
 .step-image {
-  max-width: 400px;
-  width: 100%;
+  max-width: 100%;  /* kitölti a szülő max szélességét */
   height: auto;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   display: block;
-  margin: 0 auto;
-}
-
-/* Igazítások */
-.align-left {
-  text-align: left;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
+  /* eltávolítjuk a margin: 0 auto, mert a flex szülő igazítja */
 }
 
 @media (max-width: 768px) {
-  .step-image {
+  .step-image-section {
     max-width: 90%;
-    margin: 0 auto;
-    display: block;
+    margin: 0 auto 30px auto; /* középre és alsó margó mobilon */
+    justify-content: center !important; /* minden képet középre igazít mobilon */
   }
 
-  .align-left,
-  .align-right {
-    text-align: center;
+  .step-image {
+    max-width: 90%;
   }
 }
 
