@@ -147,7 +147,7 @@ video {
 .wave {
   position: absolute;
   width: 100%;
-  height: 150px;
+  height: 80px;
   left: 0;
   z-index: 5;
   pointer-events: none;
@@ -161,10 +161,12 @@ video {
 
 .wave-top {
   top: 0;
+  transform: translateY(-50%);
 }
 
 .wave-bottom {
   bottom: 0;
+  transform: translateY(50%);
 }
 
 /* Tartalom (kép helyett szöveges blokkokkal) */
@@ -366,12 +368,12 @@ video {
 
 .wave-top {
   top: 0;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 
 .wave-bottom {
   bottom: 0;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 .wave-top svg,
