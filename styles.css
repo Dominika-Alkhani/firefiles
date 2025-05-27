@@ -353,6 +353,32 @@ video {
   z-index: 2;
 }
 
+/* Hullámok */
+.wave-top,
+.wave-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.wave-top {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.wave-bottom {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.wave-top svg,
+.wave-bottom svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 footer {
   text-align: center;
   padding: 10px;
