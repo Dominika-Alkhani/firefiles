@@ -343,9 +343,9 @@ video {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  opacity: 0.6;
-  z-index: 1;
-  filter: brightness(0.7) blur(2px);
+  opacity: 0.9;               /* Növeljük az opacity-t, hogy jobban látszódjon */
+  z-index: 1;                 /* Videó a legalacsonyabb rétegen */
+  filter: brightness(1) blur(0); /* Eltávolítjuk a sötétítést és elmosást */
 }
 
 .step-image-section {
@@ -353,13 +353,15 @@ video {
   z-index: 2;
 }
 
-/* Hullámok */
+/* Hullámok - legyenek a videó előtt */
 .wave-top,
 .wave-bottom {
   position: absolute;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 5;                /* A hullámok előrébb jönnek */
+  pointer-events: none;      /* Ne zavarjanak az interakcióban */
+  fill: white;               /* Biztos fehér szín */
 }
 
 .wave-top {
