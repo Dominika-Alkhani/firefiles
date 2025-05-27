@@ -289,48 +289,43 @@ video {
   margin-right: auto;
 }
 
-/* --- Step képek szakasz --- */
-
 .step-image-section {
   margin: 40px auto;
   max-width: 100%;
   padding: 20px;
 }
 
-/* Kép stílus: közepes méret, lekerekítés, árnyék */
 .step-image {
-  width: 300px;
+  max-width: 300px; /* kisebb méret */
+  width: 100%;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Igazítás szülőn keresztül Flexbox segítségével */
+/* Igazítások */
 .align-left {
-  display: flex;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .align-center {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .align-right {
-  display: flex;
-  justify-content: flex-end;
+  text-align: right;
 }
 
-/* Mobilbarát viselkedés: képek középre, szélesebben */
 @media (max-width: 768px) {
   .step-image {
-    width: 90%;
+    max-width: 90%;
     margin: 0 auto;
+    display: block;
   }
 
   .align-left,
   .align-right {
-    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -388,9 +383,4 @@ footer {
 
   .step-image {
     width: 90%;
-  }
-
-  .pics1-image {
-    width: 90%;
-  }
-} 
+  } 
