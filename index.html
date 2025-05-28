@@ -98,13 +98,13 @@
     </svg>
   </div>
 
-  <!-- Háttérvideó -->
-  <video autoplay muted loop class="steps-background-video">
-    <source src="cloud.mp4" type="video/mp4" />
+ <section class="steps-section">
+  <!-- Háttérvideó csak a step szekcióhoz -->
+  <video autoplay muted loop playsinline class="step-background-video">
+    <source src="cloud.mp4" type="video/mp4">
   </video>
 
-  <!-- Step képek -->
-  <section class="steps-section">
+  <!-- Átlátszó keret a képekkel -->
   <div class="step-wrapper">
     <div class="step-image-section">
       <img src="step1.png" alt="Step 1" class="step-image">
@@ -117,7 +117,6 @@
     </div>
   </div>
 </section>
-
    <!-- Alsó hullám -->
   <div class="wave-bottom">
     <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
