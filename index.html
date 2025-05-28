@@ -144,26 +144,16 @@
   </footer>
 
   const sections = document.querySelectorAll('.hidden');
-
 window.addEventListener('scroll', () => {
   const triggerPoint = window.innerHeight * 0.8;
   sections.forEach(section => {
     if (section.getBoundingClientRect().top < triggerPoint) {
       section.classList.add('visible');
-      section.classList.remove('hidden'); // eltávolítjuk a rejtett osztályt is
     }
   });
 });
-
-// Az oldal betöltésekor is ellenőrzi
-window.addEventListener('load', () => {
-  sections.forEach(section => {
-    if (section.getBoundingClientRect().top < window.innerHeight) {
-      section.classList.add('visible');
-      section.classList.remove('hidden');
-    }
-  });
-});
+// Induláskor is ellenőrzi
+window.dispatchEvent(new Event('scroll'));
 
 
   <script>
