@@ -28,15 +28,21 @@ video {
 }
 
 .navbar {
-  margin: 20px auto;
+  position: fixed;      /* FIX pozíció a viewport tetején */
+  top: 0;
+  left: 50%;           /* középre igazítás */
+  transform: translateX(-50%); /* pontos középre húzás */
   width: fit-content;
-  background: rgba(0, 0, 0, 0.3); /* halvány háttér a teljes navbarhoz */
+  margin: 0;           /* fix pozíciónál a margin nem kell */
+  background: rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* kiemelkedés */
-  backdrop-filter: blur(6px); /* üvegszerű hatás */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  z-index: 1000;       /* mindig a legtetején legyen */
 }
 
+/* A többi maradhat ugyanaz */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -52,17 +58,18 @@ video {
   font-size: 18px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  border: 1.5px solid rgba(255, 255, 255, 0.3); /* elegáns fehér szegély */
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05); /* enyhe fényes hatás */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
 }
 
 .navbar ul li a:hover {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px); /* kis kiemelkedés hover-re */
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); /* világosabb árnyék hover-re */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
+
 
 /* Szöveges szekció képek helyett */
 .why-choose-us {
