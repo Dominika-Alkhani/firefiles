@@ -290,28 +290,33 @@ video {
   margin-right: auto;
 }
 
+/* ÚJ! közös üveghatású keret */
+.step-wrapper {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15); /* átlátszó fehér */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Maradhat, kis módosítással */
 .step-image-section {
-  margin: 40px auto;
-  max-width: 800px; /* NAGYOBB KERET A KÉPNEK */
-  padding: 20px;
   display: flex;
   align-items: center;
-}
-
-#step1 {
-  justify-content: flex-start;
-}
-
-#step2 {
   justify-content: center;
 }
 
-#step3 {
-  justify-content: flex-end;
-}
-
 .step-image {
-  max-width: 600px;  /* nagyobb kép */
+  max-width: 600px;
   width: 100%;
   height: auto;
   border-radius: 16px;
@@ -319,24 +324,17 @@ video {
   display: block;
 }
 
+/* Reszponzivitás */
 @media (max-width: 768px) {
-  .step-image-section {
-    max-width: 90%;
-    margin: 0 auto 30px auto;
-    justify-content: center !important;
+  .step-wrapper {
+    padding: 20px;
+    gap: 20px;
   }
 
   .step-image {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
-
-.steps-section {
-  position: relative;
-  overflow: hidden;
-  padding: 60px 0;
-}
-
 .steps-background-video {
   position: absolute;
   top: 0;
