@@ -7,7 +7,7 @@ html, body {
   background: transparent;
 }
 body {
-  padding-top: 60px; /* vagy amennyi a navbar tényleges magassága */
+  padding-top: 60px; /* igazítsd a navbar magasságához */
 }
 
 #background-div {
@@ -31,18 +31,18 @@ video {
 }
 
 .navbar {
-  position: fixed;      /* FIX pozíció a viewport tetején */
-  top: 0;
-  left: 50%;           /* középre igazítás */
-  transform: translateX(-50%); /* pontos középre húzás */
-  width: fit-content;
-  margin: 0;           /* fix pozíciónál a margin nem kell */
+  position: fixed;    /* fix pozíció, mindig látható */
+  top: 0;             /* az oldal tetején legyen */
+  left: 50%;          /* vízszintesen középre */
+  transform: translateX(-50%);  /* középre igazítás */
+  z-index: 1000;      /* mindig felül legyen */
+  width: fit-content; /* maradhat a szélesség */
+  margin: 0;          /* margin eltávolítása, mert fixed elemnél nem kell */
   background: rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
-  z-index: 1000;       /* mindig a legtetején legyen */
 }
 
 /* A többi maradhat ugyanaz */
