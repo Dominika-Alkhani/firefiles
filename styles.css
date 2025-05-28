@@ -6,6 +6,9 @@ html, body {
   font-family: 'Arial', sans-serif;
   background: transparent;
 }
+body {
+  padding-top: 60px; /* vagy amennyi a navbar tényleges magassága */
+}
 
 #background-div {
   position: fixed;
