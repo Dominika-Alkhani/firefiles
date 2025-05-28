@@ -144,12 +144,13 @@ video {
 }
 
 /* Fehér hullámok (SVG) a videó tetején és alján */
-.wave {
+.wave-top,
+.wave-bottom {
   position: absolute;
+  left: 0;
   width: 100%;
   height: 150px;
-  left: 0;
-  z-index: 5;
+  z-index: 1; /* videó fölött, wrapper alatt */
   pointer-events: none;
 }
 
