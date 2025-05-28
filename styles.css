@@ -154,10 +154,12 @@ video {
   pointer-events: none;
 }
 
-.wave svg {
-  display: block;
+.wave-top svg,
+.wave-bottom svg {
   width: 100%;
   height: 100%;
+  display: block;
+  fill: white;
 }
 
 .wave-top {
