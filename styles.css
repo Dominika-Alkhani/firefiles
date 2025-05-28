@@ -406,9 +406,9 @@ footer {
 }
 
 .hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important;
 }
 
 .visible {
