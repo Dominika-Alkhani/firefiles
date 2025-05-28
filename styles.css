@@ -165,6 +165,7 @@ video {
 
 .wave-bottom {
   bottom: 0;
+  transform: rotate(180deg);
 }
 
 /* Tartalom (kép helyett szöveges blokkokkal) */
@@ -371,6 +372,7 @@ video {
 
 .wave-bottom {
   bottom: 0;
+  transform: rotate(180deg);
 }
 
 .wave-top svg,
