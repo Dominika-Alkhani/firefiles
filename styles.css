@@ -351,7 +351,7 @@ video {
 
 .step-image-section {
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 /* Hullámok - legyenek a videó előtt */
@@ -361,7 +361,7 @@ video {
   left: 0;
   width: 100%;
   height: 150px; /* vagy a hullám SVG magassága */
-  z-index: 5;                /* A hullámok előrébb jönnek */
+  z-index: 1;                /* A hullámok előrébb jönnek */
   pointer-events: none;      /* Ne zavarjanak az interakcióban */
   fill: white;               /* Biztos fehér szín */
 }
