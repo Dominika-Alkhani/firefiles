@@ -142,17 +142,19 @@
     <p>&copy; 2025 Utazási Weboldal</p>
   </footer>
 
+ <script>
   const sections = document.querySelectorAll('.hidden');
-window.addEventListener('scroll', () => {
-  const triggerPoint = window.innerHeight * 0.8;
-  sections.forEach(section => {
-    if (section.getBoundingClientRect().top < triggerPoint) {
-      section.classList.add('visible');
-    }
+  window.addEventListener('scroll', () => {
+    const triggerPoint = window.innerHeight * 0.8;
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top < triggerPoint) {
+        section.classList.add('visible');
+      }
+    });
   });
-});
-// Induláskor is ellenőrzi
-window.dispatchEvent(new Event('scroll'));
+  // Induláskor is ellenőrzi
+  window.dispatchEvent(new Event('scroll'));
+</script>
 
 
   <script>
