@@ -398,38 +398,40 @@ video {
   }
 }
 
-.contact-social-section {
+.contact-section {
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 60px 20px;
-  background-color: transparent;
   text-align: center;
 }
 
-.contact-social-section h2 {
-  font-size: 2rem;
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.contact-container h2 {
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-.contact-info p,
-.social-links p {
-  font-size: 1.1rem;
-  margin: 10px 0;
+.contact-container p {
+  margin: 15px 0;
+  font-size: 1.1em;
 }
 
-.contact-info i,
-.social-links i {
-  margin-right: 8px;
-  color: #0077b6; /* kék árnyalat */
+.contact-container i {
+  margin-right: 10px;
+  color: #444;
 }
 
-.contact-info a,
-.social-links a {
-  color: #0077b6;
+.contact-container a {
+  color: #0077cc;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.contact-info a:hover,
-.social-links a:hover {
+.contact-container a:hover {
   text-decoration: underline;
 }
 
