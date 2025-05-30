@@ -203,5 +203,48 @@
       d.body.appendChild(s);
     }
   </script> 
+<!-- Cookie Banner -->
+<div id="cookie-banner" style="
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+">
+  <span>Weboldalunk sütiket használ a gördülékenyebb működés és a jobb felhasználói élmény érdekében. Kérjük, fogadd el a sütik használatát.</span>
+  <button id="cookie-accept-btn" style="
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  ">Elfogadom</button>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const btn = document.getElementById('cookie-accept-btn');
+
+  // Ellenőrizzük, hogy már elfogadták-e a sütiket
+  if(localStorage.getItem('cookiesAccepted')) {
+    banner.style.display = 'none';
+  }
+
+  btn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
